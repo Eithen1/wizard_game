@@ -1,0 +1,39 @@
+package main.java.uk.ac.aber.cs39440.wizard.core;
+
+public class Card {
+    char value;
+    Suit suit;
+
+
+
+    public Card(Suit suit, char value) {
+        this.suit = suit;
+        this.value = value;
+    }
+
+    public Suit getSuit() {
+        return suit;
+    }
+
+    public void setSuit(Suit suit) {
+        this.suit = suit;
+    }
+
+    public char getValue() {
+        return value;
+    }
+
+    public void setValue(char value) {
+        this.value = value;
+    }
+
+    public String toString(){
+        if(suit == Suit.non){
+           return value + "-";
+        } else{
+             return value + suit.toString();
+        }
+
+    }
+
+}
