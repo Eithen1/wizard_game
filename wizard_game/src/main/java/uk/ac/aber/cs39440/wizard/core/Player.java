@@ -35,7 +35,7 @@ public class Player {
     public void handToString(){
         System.out.println();
         for(int i=0; i<hand.size(); i++){
-            System.out.println(hand.get(i).toString());
+            System.out.println(i + ": " + hand.get(i).toString());
         }
     }
     public int getBid() {
@@ -55,8 +55,12 @@ public class Player {
     }
 
     public Card getPlayCard() {
-        return playCard;
-    }
+        return playCard;}
+
+   public void getPlayCard(int i) {
+        playCard = hand.get(i);
+        System.out.println(playCard);
+   }
 
     public void setPlayCard(Card playCard) {
         this.playCard = playCard;
