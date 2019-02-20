@@ -8,18 +8,22 @@ public class Player {
     int bid;
     String name;
     Card playCard;
-
+    int tricksWon = 0;
 
     public Player() {
         this.hand = new ArrayList<>();
         this.bid = bid;
         this.name = name;
         this.playCard = playCard;
+        this.tricksWon = tricksWon;
     }
 
+
     public void populateHand(Deck deck){
-        for(int i=0; i<10; i++){
+        for(int i=0; i<15; i++){
+            if(deck.getCard(i) != null){
             hand.add(deck.getCard(i));
+            }else{populateHand(deck);}
             deck.removeCard(i);
     }
     }

@@ -1,30 +1,31 @@
 package main.java.uk.ac.aber.cs39440.wizard.core;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
 
-    private static Deck deck;
-    private static Player player;
-private  static Scanner reader = new Scanner(System.in);
+    public static Deck deck;
+    public static ArrayList<Player> players = new ArrayList<>();
+private static Round r = new Round(deck,players);
+public static Card trump;
 
-
-public  static void generate(){
-    deck = new Deck();
-    player = new Player();
-    deck.generateDeck();
-    System.out.println(deck.getSize());
-    deck.printDeck();
-    player.populateHand(deck);
-    player.handToString();
-    System.out.println("Select Card to Play");
-    int n = reader.nextInt();
-    player.getPlayCard(n);
-
+public void setupPlayers(){
+    Player player1 = new Player();
+    players.add(player1);
+    for(int i=0; i<=3; i++){
+        AI computer = new AI();
+        players.add(computer);
+    }
 }
 
-
+public void gameSetup(){
+    deck = new Deck();
+    deck.generateDeck();
+    setupPlayers();
+}
     public static void main(String[] args) {
-    generate();
+    r.gameSetup();
+    r.playRound();
     }
 }
