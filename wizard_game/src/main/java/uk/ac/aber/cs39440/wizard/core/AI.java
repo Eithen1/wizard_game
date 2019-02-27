@@ -9,10 +9,15 @@ public class AI extends Player {
         super();
     }
 
-public void randomSelect(){
+public void randomSelect() {
+    Random r = new Random();
+    int i = r.nextInt(super.hand.size());
+    super.setPlayCard(super.getCard(i));
+}
+public  void randomBid(){
         Random r = new Random();
         int i = r.nextInt(super.hand.size());
-        super.getPlayCard(i);
+        super.setBid(i);
 
 }
 

@@ -1,19 +1,31 @@
 package main.java.uk.ac.aber.cs39440.wizard.core;
 
-import java.util.ArrayList;
 
-public class Rules{
-    private ArrayList<Player> players = new ArrayList<>();
+import java.util.LinkedList;
 
-    public Rules(ArrayList<Player> players){
+public class Rules extends Game{
+    private LinkedList<Player> players = new LinkedList<>();
+Player winner
+    public Rules(LinkedList<Player> players){
         this.players = players;
     }
-    public void valueRule(){
-       Player winner =players.get(0);
+    public void numberRule(){
+        winner =players.get(0);
         for(int i = 0; i<players.size(); i++)
-        if(winner.playCard.value < players.get(i).playCard.value){
+        if(winner.playCard.number < players.get(i).playCard.number){
             winner = players.get(i);
         }
     }
+
+   public void suitRule(){
+        for(int i=0; i<players.size(); i++){
+            if(players.get(i).getPlayCard().getSuit() != players.get(0).getPlayCard().getSuit()) {
+            if(players.get(i).getPlayCard().suit == trump.suit){
+                 numberRule();
+               }
+
+            }
+        }
+   }
 
 }

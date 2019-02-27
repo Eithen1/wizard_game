@@ -3,12 +3,13 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 public class Card {
     char value;
     Suit suit;
+    int number;
 
 
-
-    public Card(Suit suit, char value) {
+    public Card(Suit suit, char value, int number) {
         this.suit = suit;
         this.value = value;
+        this.number = number;
     }
 
     public Suit getSuit() {

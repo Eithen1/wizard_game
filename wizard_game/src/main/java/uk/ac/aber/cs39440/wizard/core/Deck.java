@@ -7,7 +7,7 @@ public class Deck {
 
     ArrayList<Card> deck = new ArrayList<>();
     char values[] = {'2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a'};
-
+int numbers[] = {2,3,4,5,6,7,8,9,10,11,12,13,14};
 
     public ArrayList<Card> getDeck() {
         return deck;
@@ -29,27 +29,27 @@ public class Deck {
 
     public void addwizard() {
         for (int i = 0; i < 4; i++) {
-            Card wizard = new Card(Suit.non, 'w');
+            Card wizard = new Card(Suit.non, 'w',15);
             deck.add(wizard);
         }
     }
 
     public void addJester(){
         for (int i = 0; i < 4; i++) {
-            Card jester = new Card(Suit.non, 'S');
+            Card jester = new Card(Suit.non, 'S',1);
             deck.add(jester);
         }
     }
     public void generateDeck() {
         //add the normal 52 cards to the deck
         for (int i = 0; i < values.length; i++) {
-            Card spades = new Card(Suit.spades, values[i]);
+            Card spades = new Card(Suit.spades, values[i],numbers[i]);
             deck.add(spades);
-            Card diamonds = new Card(Suit.diamonds, values[i]);
+            Card diamonds = new Card(Suit.diamonds, values[i],numbers[i]);
             deck.add(diamonds);
-            Card clubs = new Card(Suit.clubs, values[i]);
+            Card clubs = new Card(Suit.clubs, values[i],numbers[i]);
             deck.add(clubs);
-            Card hearts = new Card(Suit.hearts, values[i]);
+            Card hearts = new Card(Suit.hearts, values[i],numbers[i]);
             deck.add(hearts);
         }
 addJester();
