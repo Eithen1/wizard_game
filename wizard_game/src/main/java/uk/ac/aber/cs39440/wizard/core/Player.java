@@ -2,7 +2,6 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Player {
 
@@ -10,13 +9,12 @@ public class Player {
     int bid;
     String name;
     Card playCard;
-    int tricksWon = 0;
+    int tricksWon;
     boolean isAI =true;
 
     public Player() {
         this.hand = new ArrayList<>();
         this.bid = bid;
-        this.name = name;
         this.playCard = playCard;
         this.tricksWon = tricksWon;
     }
@@ -56,14 +54,7 @@ public class Player {
         this.bid = bid;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name)
-    {
-        this.name = name;
-    }
 public Card getCard(int i){
         return hand.get(i);
 }
@@ -90,15 +81,6 @@ public Card getCard(int i){
     public void setPlayCard(Card playCard) {
         this.playCard = playCard;
     }
-
-    public void bidding() {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Select Bidding Amount");
-        int i = reader.nextInt();
-        bid = i;
-
-    }
-
 
     public void randomSelect() {
         Random r = new Random();

@@ -25,11 +25,32 @@ public void setupPlayers(){
 public void gameSetup(){
     deck = new Deck();
     deck.generateDeck();
+    deck.shuffle();
     setupPlayers();
 }
-    public static void main(String[] args) {
-    r.gameSetup();
+
+public static void reSetup(){
+    deck = new Deck();
+    deck.generateDeck();
+    deck.shuffle();
+    trump = deck.getCard(0);
+    for(int i=0; i<=2; i++){
+        players.get(i).populateHand(deck);
+    }
+}
+
+public  static void playGame(){
+    int i=0;
     r.playRound();
+    do {
+        i++;
+        reSetup();
+        r.playRound();
+    } while(i <5);
+}
+    public static void main(String[] args) {
+        r.gameSetup();
+        playGame();
     }
 
 

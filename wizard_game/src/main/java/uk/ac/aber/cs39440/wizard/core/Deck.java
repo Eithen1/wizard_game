@@ -36,7 +36,7 @@ int numbers[] = {2,3,4,5,6,7,8,9,10,11,12,13,14};
 
     public void addJester(){
         for (int i = 0; i < 4; i++) {
-            Card jester = new Card(Suit.non, 'S',1);
+            Card jester = new Card(Suit.non, 's',1);
             deck.add(jester);
         }
     }
