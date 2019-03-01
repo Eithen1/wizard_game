@@ -7,7 +7,7 @@ public class Player {
 
     ArrayList<Card> hand;
     int bid;
-    String name;
+    int Score;
     Card playCard;
     int tricksWon;
     boolean isAI =true;
@@ -21,7 +21,7 @@ public class Player {
 
 
     public void populateHand(Deck deck) {
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; hand.size()< 15; i++) {
             if (deck.getCard(i) != null) {
                 hand.add(deck.getCard(i));
             } else {
@@ -60,6 +60,14 @@ public Card getCard(int i){
 }
     public Card getPlayCard() {
         return playCard;
+    }
+
+    public int getScore() {
+        return Score;
+    }
+
+    public void setScore(int score) {
+        Score = score;
     }
 
     public int getTricksWon() {

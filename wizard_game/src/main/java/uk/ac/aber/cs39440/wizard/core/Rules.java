@@ -3,12 +3,14 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 
 import java.util.LinkedList;
 
-public class Rules extends Game{
+public class Rules extends Round{
     private LinkedList<Player> players;
-Player winner;
+    public Player winner;
+
+
     public Rules(LinkedList<Player> players){
         this.players = players;
-        winner = new Player();
+        winner = players.get(0);
     }
     public void numberRule(){
         for(int i = 0; i<players.size(); i++)
@@ -19,10 +21,10 @@ Player winner;
 
    public void suitRule(){
         for(int i=0; i<players.size(); i++){
-            if(players.get(i).getPlayCard().suit == trump.suit && winner.getPlayCard().suit == trump.suit || winner.getPlayCard().suit == players.get(i).getPlayCard().suit){
+            if((players.get(i).getPlayCard().suit == super.getTrump().suit && winner.getPlayCard().suit == super.getTrump().suit )|| winner.getPlayCard().suit == players.get(i).getPlayCard().suit){
                  numberRule();
                }
-else if(players.get(i).getPlayCard().suit == trump.suit && winner.getPlayCard().suit != players.get(i).getPlayCard().suit){
+else if(players.get(i).getPlayCard().suit == super.getTrump().suit && winner.getPlayCard().suit != players.get(i).getPlayCard().suit){
                 winner = players.get(i);
             }
         }
@@ -30,8 +32,8 @@ else if(players.get(i).getPlayCard().suit == trump.suit && winner.getPlayCard().
 
    public void wizardRule(){
         for (int i=0; i<players.size(); i++){
-            char n = 'w';
-            if(players.get(i).getPlayCard().value == n || winner.getPlayCard().value != n){
+            int n = 15;
+            if(players.get(i).getPlayCard().number == n && winner.getPlayCard().number != n || winner == null){
                 winner = players.get(i);
             }
             else {
@@ -46,4 +48,19 @@ else if(players.get(i).getPlayCard().suit == trump.suit && winner.getPlayCard().
         winner.tricksWon++;
         System.out.println(winner.tricksWon);
    }
+
+   public void scoring(){
+        for (int i=0; i< players.size(); i++){
+            Player p = players.get(i);
+            p.setScore(10*p.getTricksWon());
+            if(p.tricksWon < p.bid || p.tricksWon > p.bid){
+                int diff = Math.abs(p.getTricksWon() - p.bid);
+                p.setScore(p.getScore() - (10*diff));
+            }
+            if(p.tricksWon == p.bid){
+                p.setScore(p.getScore() + 20);
+            }
+        }
+   }
+
 }

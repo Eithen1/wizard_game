@@ -1,16 +1,16 @@
 package main.java.uk.ac.aber.cs39440.wizard.core;
 
-import java.util.ArrayList;
+
 import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+
 
 public class Game {
 
-    public static Deck deck;
+    public  static Deck deck;
     public static LinkedList<Player> players   = new LinkedList<>();
 private static Round r = new Round(deck,players);
-public static Card trump;
+
+
 
 public void setupPlayers(){
     Player player1 = new Player();
@@ -29,30 +29,46 @@ public void gameSetup(){
     setupPlayers();
 }
 
-public static void reSetup(){
+public void reSetup(){
     deck = new Deck();
     deck.generateDeck();
     deck.shuffle();
-    trump = deck.getCard(0);
-    for(int i=0; i<=2; i++){
+    r.roundSetup();
+    for(int i=0; i<2; i++){
         players.get(i).populateHand(deck);
     }
 }
 
-public  static void playGame(){
-    int i=0;
+public void playGame(){
+Rules rules = new Rules(players);
     r.playRound();
-    do {
+    for(int i=0; i<5; i++ ){
         i++;
         reSetup();
         r.playRound();
-    } while(i <5);
+        rules.scoring();
+    }
 }
-    public static void main(String[] args) {
+    public void play() {
+
         r.gameSetup();
         playGame();
+        winner();
     }
 
-
+public void winner(){
+    Player winner = new Player();
+    for(int i=0; i<players.size(); i++){
+        if(winner.getScore() < players.get(i).getScore()){
+            winner = players.get(i);
+        }
+    }
+    if(winner.isAI == false){
+        System.out.println("You Win!!!");
+    }
+    else{
+        System.out.println("You Lose!!!");
+    }
+}
 
 }
