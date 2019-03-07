@@ -11,6 +11,7 @@ public class Player {
     Card playCard;
     int tricksWon;
     boolean isAI =true;
+    boolean isDealer= false;
 
     public Player() {
         this.hand = new ArrayList<>();
@@ -35,9 +36,6 @@ public class Player {
         return hand;
     }
 
-    public void setHand(ArrayList<Card> hand) {
-        this.hand = hand;
-    }
 
     public void handToString() {
         System.out.println();
@@ -94,7 +92,6 @@ public Card getCard(int i){
         Random r = new Random();
         int i = r.nextInt(hand.size());
         setPlayCard(hand.get(i));
-        hand.remove(i);
 
     }
     public  void randomBid(){
@@ -103,6 +100,8 @@ public Card getCard(int i){
         setBid(i);
 
     }
+ public void MonteCarlo(){
 
+ }
 }
 

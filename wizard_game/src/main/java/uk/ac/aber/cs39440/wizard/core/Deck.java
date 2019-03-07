@@ -42,7 +42,7 @@ int numbers[] = {2,3,4,5,6,7,8,9,10,11,12,13,14};
     }
     public void generateDeck() {
         //add the normal 52 cards to the deck
-        for (int i = 0; i < values.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             Card spades = new Card(Suit.spades, values[i],numbers[i]);
             deck.add(spades);
             Card diamonds = new Card(Suit.diamonds, values[i],numbers[i]);

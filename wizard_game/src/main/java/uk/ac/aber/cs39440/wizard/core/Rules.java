@@ -7,37 +7,35 @@ public class Rules extends Round{
     private LinkedList<Player> players;
     public Player winner;
 
-
     public Rules(LinkedList<Player> players){
         this.players = players;
-        winner = players.get(0);
+        winner = new Player();
     }
-    public void numberRule(){
-        for(int i = 0; i<players.size(); i++)
-        if(winner.playCard.number < players.get(i).playCard.number){
-            winner = players.get(i);
+    public void numberRule(Player p){
+        if(winner.playCard.getNumber() < p.playCard.getNumber()){
+            winner = p;
         }
     }
 
-   public void suitRule(){
-        for(int i=0; i<players.size(); i++){
-            if((players.get(i).getPlayCard().suit == super.getTrump().suit && winner.getPlayCard().suit == super.getTrump().suit )|| winner.getPlayCard().suit == players.get(i).getPlayCard().suit){
-                 numberRule();
+   public void suitRule(Player p){
+            if(((p.getPlayCard().getSuit() == super.getTrump().getSuit()) && (winner.getPlayCard().getSuit() == super.getTrump().getSuit()) )|| (winner.getPlayCard().getSuit() == p.getPlayCard().getSuit())){
+                 numberRule(p);
                }
-else if(players.get(i).getPlayCard().suit == super.getTrump().suit && winner.getPlayCard().suit != players.get(i).getPlayCard().suit){
-                winner = players.get(i);
+else if(p.getPlayCard().getSuit() == super.getTrump().getSuit() && winner.getPlayCard().getSuit() != p.getPlayCard().getSuit()){
+                winner = p;
             }
-        }
+
    }
 
    public void wizardRule(){
         for (int i=0; i<players.size(); i++){
+            Player p = players.get(i);
             int n = 15;
-            if(players.get(i).getPlayCard().number == n && winner.getPlayCard().number != n || winner == null){
-                winner = players.get(i);
+            if(p.getPlayCard().getNumber() == n && winner.getPlayCard().getNumber() != n || winner.getPlayCard() == null){
+                winner = p;
             }
             else {
-                suitRule();
+                suitRule(p);
             }
         }
    }
@@ -46,18 +44,19 @@ else if(players.get(i).getPlayCard().suit == super.getTrump().suit && winner.get
    public void scoringTrick(){
         wizardRule();
         winner.tricksWon++;
-        System.out.println(winner.tricksWon);
+        System.out.println(winner.getTricksWon());
+        winner  = new Player();
    }
 
    public void scoring(){
         for (int i=0; i< players.size(); i++){
             Player p = players.get(i);
             p.setScore(10*p.getTricksWon());
-            if(p.tricksWon < p.bid || p.tricksWon > p.bid){
-                int diff = Math.abs(p.getTricksWon() - p.bid);
+            if(p.getTricksWon() < p.getBid() || p.getTricksWon() > p.getBid()){
+                int diff = Math.abs(p.getTricksWon() - p.getBid());
                 p.setScore(p.getScore() - (10*diff));
             }
-            if(p.tricksWon == p.bid){
+            if(p.getTricksWon() == p.getBid()){
                 p.setScore(p.getScore() + 20);
             }
         }

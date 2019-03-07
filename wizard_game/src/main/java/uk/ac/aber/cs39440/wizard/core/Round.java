@@ -9,6 +9,9 @@ public class Round extends Game{
     private Scanner reader = new Scanner(System.in);
 public Card trump = new Card();
 
+    public Round() {
+    }
+
     public Card getTrump() {
         return trump;
     }
@@ -22,8 +25,6 @@ public Round(Deck deck, LinkedList<Player> players){
     this.players = players;
 }
 
-    public Round() {
-    }
 
     public void roundSetup(){
     setTrump(deck.getCard(0));
@@ -36,30 +37,51 @@ public Round(Deck deck, LinkedList<Player> players){
     }
 }
 
-public void playHand(){
+public boolean checkSuit(Card p){
+            if( p.getSuit() != players.get(0).getPlayCard().getSuit()){
+                if(p.getSuit() != trump.getSuit()){
+                System.out.println("Play Card isn't equal to trump or Dealers Suit");
+                return false;}
+                return true;
+            }
+            return true;
+        }
 
-for (int i=0; i<=2; i++) {
-   Player p = players.get(i);
-   if(p.isAI == false){
-        p.handToString();
-        System.out.println("Trump: " + getTrump().toString());
-        System.out.println("Select Card to Play");
-        int  n = reader.nextInt();
-        players.get(i).setPlayCard(p.getCard(n));
-        p.getHand().remove(n);
-    }
-    else {
-       p.handToString();
-       p.randomSelect();
-       players.get(i).setPlayCard(p.getPlayCard());
-       System.out.println(p.getPlayCard().toString());
-
-   }
+public void playHand() {
+for(int i=0; i<=2; i++){
+    Player p = players.get(i);
+        if (p.isAI == false) {
+            playerSelect(p);
+            } else {
+                p.handToString();
+                p.randomSelect();
+                do{
+                    p.randomSelect();
+                } while(checkSuit(p.getPlayCard()) == false);
+                p.getHand().remove(p.getPlayCard());
+            }
+            System.out.println(p.getPlayCard().toString());
 }
-Rules r = new Rules(players);
-r.scoringTrick();
-System.out.println("---------------------------");
-changeDealer();
+applyRules();
+}
+
+public void playerSelect(Player p){
+    p.handToString();
+    int n;
+    do{
+    System.out.println("Trump: " + getTrump().toString());
+    System.out.println("Select Card to Play");
+     n = reader.nextInt();
+p.setPlayCard(p.getCard(n));}
+    while (checkSuit(p.getPlayCard()) == false);
+
+    p.getHand().remove(n);
+}
+public void applyRules(){
+    Rules r = new Rules(players);
+    r.scoringTrick();
+    System.out.println("---------------------------");
+    changeDealer();
 }
 
 
@@ -72,7 +94,7 @@ public void check(){
 public void biddingforRound(){
     for(int i=0; i<=2; i++){
         Player p =players.get(i);
-        if(p.isAI == false){
+        if(p.isAI() == false){
             p.handToString();
             System.out.println("Enter Bid:");
             System.out.println("Trump: " + trump.toString());

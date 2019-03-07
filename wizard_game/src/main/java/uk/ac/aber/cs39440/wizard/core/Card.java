@@ -30,6 +30,14 @@ public Card(){
         this.value = value;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     public String toString(){
         if(suit == Suit.non){
            return value + "-";
