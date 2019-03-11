@@ -11,7 +11,7 @@ Node parent;
 List<Node> children;
 GameState state;
 
-public Node(){
+public Node(GameState gameState){
 this.state = new GameState();
 children = new ArrayList<>();
 }
@@ -29,6 +29,10 @@ public  Node(Node parent, GameState  State , List<Node> children){
 
     public void setParent(Node parent) {
         this.parent = parent;
+    }
+
+    public List<Node> getChildren() {
+        return children;
     }
 
     public void setChildren(List<Node> children) {

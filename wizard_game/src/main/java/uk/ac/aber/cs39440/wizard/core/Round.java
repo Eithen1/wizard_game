@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Round extends Game{
 
     private Scanner reader = new Scanner(System.in);
-public Card trump = new Card();
+public  Card trump;
 
     public Round() {
     }
@@ -37,15 +37,7 @@ public Round(Deck deck, LinkedList<Player> players){
     }
 }
 
-public boolean checkSuit(Card p){
-            if( p.getSuit() != players.get(0).getPlayCard().getSuit()){
-                if(p.getSuit() != trump.getSuit()){
-                System.out.println("Play Card isn't equal to trump or Dealers Suit");
-                return false;}
-                return true;
-            }
-            return true;
-        }
+
 
 public void playHand() {
 for(int i=0; i<=2; i++){
@@ -55,35 +47,71 @@ for(int i=0; i<=2; i++){
             } else {
                 p.handToString();
                 p.randomSelect();
+                if(containsCard(p) == true){
                 do{
                     p.randomSelect();
-                } while(checkSuit(p.getPlayCard()) == false);
+                } while(checkSuit(p.getPlayCard()) == false);}
+                else {
+                    p.randomSelect();
+                }
                 p.getHand().remove(p.getPlayCard());
             }
             System.out.println(p.getPlayCard().toString());
 }
+
 applyRules();
 }
 
 public void playerSelect(Player p){
     p.handToString();
     int n;
+    if(containsCard(p) == true){
     do{
     System.out.println("Trump: " + getTrump().toString());
     System.out.println("Select Card to Play");
      n = reader.nextInt();
 p.setPlayCard(p.getCard(n));}
-    while (checkSuit(p.getPlayCard()) == false);
+    while (checkSuit(p.getPlayCard()) == false);}
+    else{
+        System.out.println("Trump: " + getTrump().toString());
+        System.out.println("Select Card to Play");
+        n = reader.nextInt();
+        p.setPlayCard(p.getCard(n)) ;
+    }
 
     p.getHand().remove(n);
 }
 public void applyRules(){
-    Rules r = new Rules(players);
+    Rules r = new Rules(players, trump);
     r.scoringTrick();
     System.out.println("---------------------------");
     changeDealer();
 }
+    public boolean checkSuit(Card p){
+        if(p.getValue() != 'w'){
+            if( p.getSuit() != players.get(0).getPlayCard().getSuit() ){
+                if(p.getSuit() != trump.getSuit()){
+                    System.out.println("Play Card isn't equal to trump or Dealers Suit");
+                    return false;}
+                return true;
+            }
+        }
+        return true;
+    }
+public boolean containsCard(Player p){
 
+    if(p != players.get(0)){
+        for(int i=0; i < p.getHand().size(); i++){
+            Card c = p.getHand().get(i);
+            if(c.getSuit() == trump.getSuit() || c.getSuit() == players.get(0).getPlayCard().getSuit()){
+                return true;
+            }
+        }
+        return false;
+    }
+    return true;
+
+}
 
 public void check(){
     for(int i=0; i<players.size();i++){
@@ -114,7 +142,7 @@ public void playRound(){
     do{
         playHand();
     } while(p.hand.size() > 0);
-    Rules r = new Rules(players);
+    Rules r = new Rules(players,trump);
     r.scoring();
     for(int i=0; i<players.size(); i++){
        System.out.println(players.get(i).getScore());
@@ -122,6 +150,9 @@ public void playRound(){
     check();
 }
    public void changeDealer() {
+        for(int i=0; i < players.size(); i++){
+            players.get(i).setPlayCard(null);
+        }
      Player player=players.remove();
      players.add(player);
 }

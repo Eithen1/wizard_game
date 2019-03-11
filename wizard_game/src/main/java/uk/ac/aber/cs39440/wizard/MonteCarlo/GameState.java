@@ -3,15 +3,17 @@ package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 import main.java.uk.ac.aber.cs39440.wizard.core.Card;
 import main.java.uk.ac.aber.cs39440.wizard.core.Deck;
 import main.java.uk.ac.aber. cs39440.wizard.core.Player;
+import main.java.uk.ac.aber.cs39440.wizard.core.Rules;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class GameState {
 
 
     Deck cardsUsed = new Deck();
-    ArrayList<Player> players;
+    LinkedList<Player> players;
     Player ai = new Player();
     Card trump = new Card();
     int wins = 0;
@@ -19,10 +21,10 @@ public class GameState {
 
 
 public GameState(){
-    players = new ArrayList<>();
+    players = new LinkedList<>();
 }
 
-public GameState(Deck deck, ArrayList<Player> players, Card trump, Player ai){
+public GameState(Deck deck, LinkedList<Player> players, Card trump, Player ai){
     this.cardsUsed = deck;
     this.players = players;
     this.trump = trump;
@@ -31,7 +33,7 @@ public GameState(Deck deck, ArrayList<Player> players, Card trump, Player ai){
 }
 
 public GameState(GameState state){
-    this.players = new ArrayList<>(state.getPlayers());
+    this.players = new LinkedList<>(state.getPlayers());
     this.trump = state.getTrump();
     this.visitCount = state.getVisitCount();
     this.wins = state.getWins();
@@ -78,11 +80,11 @@ public GameState(GameState state){
         this.visitCount = visitCount;
     }
 
-    public ArrayList<Player> getPlayers() {
+    public LinkedList<Player> getPlayers() {
         return players;
     }
 
-    public void setPlayers(ArrayList<Player> players) {
+    public void setPlayers(LinkedList<Player> players) {
         this.players = players;
     }
 
@@ -92,6 +94,11 @@ public GameState(GameState state){
         if(players.get(i).getPlayCard() == null){
         players.get(i).randomSelect();
         }
+        Rules r = new Rules(players);
+    r.scoringTrick();
+   if( r.getWinner() == ai){
+       wins++;
+   }
     return possibleStates;
     }
 
@@ -99,13 +106,6 @@ public GameState(GameState state){
     this.visitCount++;
     }
 
-    public void randomPlay()
-
-    {
-        for (int i = 0; i < players.size(); i++) {
-            players.get(i).randomSelect();
-        }
-    }
 
 
     public void addScore(int wins){
