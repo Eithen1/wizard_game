@@ -16,6 +16,9 @@
     <SUITE FILE_PATH="coverage/wizard_game$Main.ic" NAME="Main Coverage Results" MODIFIED="1551387465530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sample.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/wizard_game$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1552525010141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>main.java.uk.ac.aber.cs39440.wizard.core.*</FILTER>
+    </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -66,10 +69,12 @@
       <file leaf-file-name="AI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="-358">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#479#485#0" expanded="true" />
+                <element signature="e#992#998#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,25 +83,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-157">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rules.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#271#272#0" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#1495#1496#0" expanded="true" />
-                <element signature="e#1524#1525#0" expanded="true" />
-                <element signature="e#1568#1569#0" expanded="true" />
-                <element signature="e#1604#1605#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
@@ -104,24 +92,10 @@
       <file leaf-file-name="Round.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="78" column="35" lean-forward="true" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+            <state relative-caret-position="198">
+              <caret line="197" column="21" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#212#213#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,12 +104,22 @@
       <file leaf-file-name="MonteCarloTreeSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="35" column="65" lean-forward="true" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+            <state relative-caret-position="625">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1178#1179#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="102" column="86" selection-start-line="102" selection-start-column="86" selection-end-line="102" selection-end-column="86" />
+              <folding>
+                <element signature="e#2212#2218#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,24 +128,10 @@
       <file leaf-file-name="UCT.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,8 +140,8 @@
       <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-388">
-              <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+            <state relative-caret-position="95">
+              <caret line="85" column="37" lean-forward="true" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#456#457#0" expanded="true" />
@@ -184,10 +154,6 @@
                 <element signature="e#799#800#0" expanded="true" />
                 <element signature="e#847#848#0" expanded="true" />
                 <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#947#948#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
-                <element signature="e#1021#1022#0" expanded="true" />
                 <element signature="e#1049#1050#0" expanded="true" />
                 <element signature="e#1076#1077#0" expanded="true" />
                 <element signature="e#1113#1114#0" expanded="true" />
@@ -202,23 +168,6 @@
                 <element signature="e#880#881#0" expanded="true" />
                 <element signature="e#1865#1866#0" expanded="true" />
                 <element signature="e#1894#1895#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Tree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="e#194#195#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
-                <element signature="e#259#260#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -250,16 +199,16 @@
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/gui/Main.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java" />
         <option value="$PROJECT_DIR$/docs/Chapters_Research/chapter1.tex" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/State.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Tree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Tree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java" />
       </list>
     </option>
@@ -280,7 +229,7 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="946" />
     <option name="width" value="974" />
     <option name="height" value="1040" />
@@ -300,6 +249,11 @@
             <path>
               <item name="wizard_game" type="b2602c69:ProjectViewProjectNode" />
               <item name="wizard_game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wizard_game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wizard_game" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wizard_game" type="b2602c69:ProjectViewProjectNode" />
@@ -353,6 +307,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mcts-framework" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -536,7 +491,7 @@
       <workItem from="1550756244057" duration="2899000" />
       <workItem from="1551105718600" duration="41058000" />
       <workItem from="1551612661326" duration="25866000" />
-      <workItem from="1552171513669" duration="22861000" />
+      <workItem from="1552171513669" duration="40774000" />
     </task>
     <servers />
   </component>
@@ -561,7 +516,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115109000" />
+    <option name="totallyTimeSpent" value="133022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,14 +538,14 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5005208" side_tool="true" weight="0.32624868" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.6772429" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.67697227" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.50653595" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.5849673" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32897604" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.11567164" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.08955224" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
       <window_info id="Learn" order="6" />
@@ -598,7 +553,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3943355" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.45424837" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" id="JetGradle" order="5" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -611,42 +566,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Application Servers" order="11" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Application Servers" order="11" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="JetGradle" order="5" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.23965141" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Profiler" order="9" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Changes" order="7" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5005208" side_tool="true" weight="0.32624868" />
-      <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.32026145" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Problems" order="10" />
-      <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.6772429" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32897604" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.11567164" />
-      <window_info id="Learn" order="6" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3943355" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -662,139 +581,457 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
           <line>43</line>
           <properties />
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="99" />
+          <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
           <line>52</line>
           <properties />
-          <option name="timeStamp" value="100" />
+          <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>69</line>
+          <line>53</line>
           <properties />
-          <option name="timeStamp" value="101" />
+          <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>70</line>
+          <line>54</line>
           <properties />
-          <option name="timeStamp" value="102" />
+          <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>71</line>
+          <line>58</line>
           <properties />
-          <option name="timeStamp" value="103" />
+          <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
           <line>73</line>
           <properties />
-          <option name="timeStamp" value="106" />
+          <option name="timeStamp" value="154" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>74</line>
           <properties />
-          <option name="timeStamp" value="109" />
+          <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>75</line>
           <properties />
-          <option name="timeStamp" value="110" />
+          <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>44</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>76</line>
           <properties />
-          <option name="timeStamp" value="111" />
+          <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>48</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>77</line>
           <properties />
-          <option name="timeStamp" value="112" />
+          <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>49</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>96</line>
           <properties />
-          <option name="timeStamp" value="113" />
+          <option name="timeStamp" value="159" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>33</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>102</line>
           <properties />
-          <option name="timeStamp" value="114" />
+          <option name="timeStamp" value="160" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>29</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>103</line>
           <properties />
-          <option name="timeStamp" value="115" />
+          <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
           <line>84</line>
           <properties />
-          <option name="timeStamp" value="119" />
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>85</line>
+          <properties />
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>166</line>
+          <properties />
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>169</line>
+          <properties />
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>162</line>
+          <properties />
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>125</line>
+          <properties />
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="211" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>85</line>
+          <line>160</line>
           <properties />
-          <option name="timeStamp" value="121" />
+          <option name="timeStamp" value="212" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>9</line>
-          <properties field="trump" class="main.java.uk.ac.aber.cs39440.wizard.core.Round" />
-          <option name="timeStamp" value="116" />
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="213" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java</url>
-          <line>8</line>
-          <properties field="trump" class="main.java.uk.ac.aber.cs39440.wizard.core.Rules" />
-          <option name="timeStamp" value="118" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>161</line>
+          <properties />
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="219" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="122" />
+      <option name="time" value="220" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -821,31 +1058,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="59" lean-forward="true" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -867,8 +1079,6 @@
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -947,8 +1157,6 @@
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1047,29 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="77" column="2" lean-forward="true" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
-          <folding>
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/gui/Main.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1077,13 +1262,6 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/FrontMatter/abstract.tex">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1108,16 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/State.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1135,32 +1303,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="77" column="2" lean-forward="true" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
+          <folding>
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        <state relative-caret-position="95">
+          <caret line="85" column="37" lean-forward="true" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#456#457#0" expanded="true" />
@@ -1173,10 +1405,6 @@
             <element signature="e#799#800#0" expanded="true" />
             <element signature="e#847#848#0" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
             <element signature="e#1049#1050#0" expanded="true" />
             <element signature="e#1076#1077#0" expanded="true" />
             <element signature="e#1113#1114#0" expanded="true" />
@@ -1195,29 +1423,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Tree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="315">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="35" column="65" lean-forward="true" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+        <state relative-caret-position="-358">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#479#485#0" expanded="true" />
+            <element signature="e#992#998#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1232,36 +1462,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        <state relative-caret-position="175">
+          <caret line="102" column="86" selection-start-line="102" selection-start-column="86" selection-end-line="102" selection-end-column="86" />
+          <folding>
+            <element signature="e#2212#2218#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="625">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1524#1525#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="78" column="35" lean-forward="true" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+        <state relative-caret-position="198">
+          <caret line="197" column="21" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
           </folding>
         </state>
       </provider>

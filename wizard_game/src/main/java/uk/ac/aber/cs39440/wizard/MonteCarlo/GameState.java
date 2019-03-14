@@ -15,7 +15,6 @@ public class GameState {
     Deck cardsUsed = new Deck();
     LinkedList<Player> players;
     Player ai = new Player();
-    Card trump = new Card();
     int wins = 0;
     int visitCount;
 
@@ -24,17 +23,15 @@ public GameState(){
     players = new LinkedList<>();
 }
 
-public GameState(Deck deck, LinkedList<Player> players, Card trump, Player ai){
+public GameState(Deck deck, LinkedList<Player> players, Player ai){
     this.cardsUsed = deck;
     this.players = players;
-    this.trump = trump;
     this.ai = ai;
 
 }
 
 public GameState(GameState state){
     this.players = new LinkedList<>(state.getPlayers());
-    this.trump = state.getTrump();
     this.visitCount = state.getVisitCount();
     this.wins = state.getWins();
     this.ai = state.getAi();
@@ -54,14 +51,6 @@ public GameState(GameState state){
 
     public void setCardsUsed(Deck cardsUsed) {
         this.cardsUsed = cardsUsed;
-    }
-
-    public Card getTrump() {
-        return trump;
-    }
-
-    public void setTrump(Card trump) {
-        this.trump = trump;
     }
 
     public int getWins() {

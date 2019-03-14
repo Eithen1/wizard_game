@@ -1,6 +1,8 @@
 package main.java.uk.ac.aber.cs39440.wizard.core;
 
 
+import main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.MonteCarloTreeSearch;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -11,6 +13,8 @@ public  Card trump;
 
     public Round() {
     }
+
+
 
     public Card getTrump() {
         return trump;
@@ -42,17 +46,22 @@ public Round(Deck deck, LinkedList<Player> players){
 public void playHand() {
 for(int i=0; i<=2; i++){
     Player p = players.get(i);
+    Card c = new Card();
         if (p.isAI == false) {
             playerSelect(p);
             } else {
                 p.handToString();
-                p.randomSelect();
+            MonteCarloTreeSearch m = new MonteCarloTreeSearch();
+        c  =    m.findNextMove(p, players, p.getBid(),deck);
+        p.setPlayCard(c);
                 if(containsCard(p) == true){
                 do{
-                    p.randomSelect();
+               c   =  m.findNextMove(p,players,p.getBid(),deck);
+               p.setPlayCard(c);
                 } while(checkSuit(p.getPlayCard()) == false);}
                 else {
-                    p.randomSelect();
+                  c =  m.findNextMove(p,players,p.getBid(),deck);
+                  p.setPlayCard(c);
                 }
                 p.getHand().remove(p.getPlayCard());
             }
@@ -62,6 +71,52 @@ for(int i=0; i<=2; i++){
 applyRules();
 }
 
+    public void playRandomHand() {
+        for(int i=0; i<=2; i++){
+            Player p = players.get(i);
+            Card c = new Card();
+            if (p.isAI == false) {
+                playerSelect(p);
+            } else {
+                p.handToString();
+                if(containsCard(p) == true){
+                    do{
+                       p.randomSelect();
+                    } while(checkSuit(p.getPlayCard()) == false);}
+                else {
+                   p.randomSelect();
+                }
+                p.getHand().remove(p.getPlayCard());
+            }
+            System.out.println(p.getPlayCard().toString());
+        }
+
+        applyRules();
+    }
+
+
+    public void playRuleBasedHand() {
+        for(int i=0; i<=2; i++){
+            Player p = players.get(i);
+            Card c = new Card();
+            if (p.isAI == false) {
+                playerSelect(p);
+            } else {
+                p.handToString();
+                if(containsCard(p) == true){
+                    do{
+                        p.ruleBasedSelect(trump);
+                    } while(checkSuit(p.getPlayCard()) == false);}
+                else {
+                    p.ruleBasedSelect(trump);
+                }
+                p.getHand().remove(p.getPlayCard());
+            }
+            System.out.println(p.getPlayCard().toString());
+        }
+
+        applyRules();
+    }
 public void playerSelect(Player p){
     p.handToString();
     int n;
@@ -103,7 +158,7 @@ public boolean containsCard(Player p){
     if(p != players.get(0)){
         for(int i=0; i < p.getHand().size(); i++){
             Card c = p.getHand().get(i);
-            if(c.getSuit() == trump.getSuit() || c.getSuit() == players.get(0).getPlayCard().getSuit()){
+            if(c.getSuit() == trump.getSuit() || c.getSuit() == players.get(0).getPlayCard().getSuit()) {
                 return true;
             }
         }
@@ -129,7 +184,7 @@ public void biddingforRound(){
             int n = reader.nextInt();
             players.get(i).setBid(n);
         } else {
-            players.get(i).randomBid();
+            players.get(i).ruleBid(trump);
            System.out.println( players.get(i).getBid());
         }
     }
@@ -140,7 +195,7 @@ public void playRound(){
    Player p  = players.getLast();
 
     do{
-        playHand();
+        playRuleBasedHand();
     } while(p.hand.size() > 0);
     Rules r = new Rules(players,trump);
     r.scoring();

@@ -11,6 +11,12 @@ Node parent;
 List<Node> children;
 GameState state;
 
+
+public Node(){
+    this.state = new GameState();
+    children = new ArrayList<>();
+}
+
 public Node(GameState gameState){
 this.state = new GameState();
 children = new ArrayList<>();
@@ -22,7 +28,16 @@ public  Node(Node parent, GameState  State , List<Node> children){
     this.state = State ;
 
 }
-
+    public Node(Node node) {
+        this.children = new ArrayList<>();
+        this.state = new GameState(node.getState());
+        if (node.getParent() != null)
+            this.parent = node.getParent();
+        List<Node> childArray = node.getChildren();
+        for (Node child : childArray) {
+            this.children.add(new Node(child));
+        }
+    }
     public Node getParent() {
         return parent;
     }
@@ -55,8 +70,8 @@ public  Node(Node parent, GameState  State , List<Node> children){
 
     public Node getChildWithMaxScore() {
         return Collections.max(this.children, Comparator.comparing(c -> {
-            return c.getState().getVisitCount();
-        }));
+                 return c.getState().getVisitCount();}
+                 ));
     }
 
 

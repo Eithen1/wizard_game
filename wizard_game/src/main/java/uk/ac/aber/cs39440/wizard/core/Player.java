@@ -1,6 +1,7 @@
 package main.java.uk.ac.aber.cs39440.wizard.core;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
 
 public class Player {
@@ -94,11 +95,80 @@ public Card getCard(int i){
         setPlayCard(hand.get(i));
 
     }
+
+    public void ruleBid(Card trump){
+        int counter = 0;
+        ArrayList<Card> temp = getHand();
+        for(int i=0; i< temp.size(); i++){
+            if(temp.get(i).getSuit() == trump.getSuit() || temp.get(i).getValue() > 11){
+                counter++;
+            }
+
+
+        }
+
+        setBid(counter/2);
+    }
+
     public  void randomBid(){
         Random r = new Random();
         int i = r.nextInt(hand.size());
         setBid(i);
 
+    }
+    /**
+     * Created List of Cards that match the Suit of the Trump Card in the Players Hand
+     */
+    public LinkedList<Card> ListOfTrumpSuit(Card trump){
+        LinkedList<Card> TrumpPriority = new LinkedList<Card>();
+        TrumpPriority.addAll(getHand());
+        for(int i=TrumpPriority.size()-1; i > 0; i--){
+            Card c= TrumpPriority.get(i);
+            if(c.getSuit() != trump.getSuit()){
+                if(c.getNumber() != 15){
+                TrumpPriority.remove(i);}
+            }
+        }
+        return sortList(TrumpPriority);
+    }
+
+    public LinkedList<Card> ListOfOtherSuit(Card trump){
+        LinkedList<Card> OtherPriority = new LinkedList<>();
+        OtherPriority.addAll(getHand());
+        for(int i=OtherPriority.size()-1; i >0; i--
+                ){
+            Card c= OtherPriority.get(i);
+            if(c.getSuit() == trump.getSuit() || c.getNumber() == 15){
+                OtherPriority.remove(i);
+            }
+        }
+
+        return sortList(OtherPriority);
+    }
+    public LinkedList<Card> sortList(LinkedList<Card> list){
+
+            for(int j=0; j < list.size()-1; j++)
+                if(list.get(j).getNumber() > list.get(j+1).getNumber()){
+                Card temp = list.get(j);
+                list.set(j,list.get(j+1));
+                list.set(j+1,temp);
+                    }
+
+        return list;
+    }
+
+
+    public void ruleBasedSelect(Card trump){
+
+        LinkedList<Card> OtherPriority = ListOfOtherSuit(trump);
+        LinkedList<Card> TrumpPriority =ListOfTrumpSuit(trump);
+
+        if(tricksWon != bid){
+            setPlayCard(TrumpPriority.getFirst());
+        }
+        if(tricksWon == bid){
+            setPlayCard(OtherPriority.getLast());
+        }
     }
  public void MonteCarlo(){
 
