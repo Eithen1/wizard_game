@@ -6,9 +6,11 @@ import main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.MonteCarloTreeSearch;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Round extends Game{
+public class Round{
 
     private Scanner reader = new Scanner(System.in);
+    public  Deck deck;
+    private LinkedList<Player> players   = new LinkedList<>();
 public  Card trump;
 
     public Round() {
@@ -31,6 +33,7 @@ public Round(Deck deck, LinkedList<Player> players){
 
 
     public void roundSetup(){
+
     setTrump(deck.getCard(0));
     deck.removeCard(0);
     for(int i=0; i<=2; i++){
@@ -41,31 +44,49 @@ public Round(Deck deck, LinkedList<Player> players){
     }
 }
 
+public void playSimHand(){
+    for(int i=0; i<=2; i++){
 
+        Player p = players.get(i);
+        if(p.getPlayCard() == null)
+
+            if(containsCard(p) == true){
+                do{
+                    p.randomSelect();
+                } while(checkSuit(p) == false);}
+            else {
+              p.randomSelect();
+            }
+
+            p.getHand().remove(p.getPlayCard());
+    }
+
+    applyRules();
+}
 
 public void playHand() {
 for(int i=0; i<=2; i++){
     Player p = players.get(i);
-    Card c = new Card();
+    Card c;
         if (p.isAI == false) {
             playerSelect(p);
             } else {
                 p.handToString();
             MonteCarloTreeSearch m = new MonteCarloTreeSearch();
-        c  =    m.findNextMove(p, players, p.getBid(),deck);
+        c  =    m.findNextMove(p, players,deck,trump);
         p.setPlayCard(c);
                 if(containsCard(p) == true){
                 do{
-               c   =  m.findNextMove(p,players,p.getBid(),deck);
+               c   =  m.findNextMove(p,players,deck,trump);
                p.setPlayCard(c);
-                } while(checkSuit(p.getPlayCard()) == false);}
+                } while(checkSuit(p) == false);}
                 else {
-                  c =  m.findNextMove(p,players,p.getBid(),deck);
+                  c =  m.findNextMove(p,players,deck,trump);
                   p.setPlayCard(c);
                 }
                 p.getHand().remove(p.getPlayCard());
             }
-            System.out.println(p.getPlayCard().toString());
+
 }
 
 applyRules();
@@ -82,7 +103,7 @@ applyRules();
                 if(containsCard(p) == true){
                     do{
                        p.randomSelect();
-                    } while(checkSuit(p.getPlayCard()) == false);}
+                    } while(checkSuit(p) == false);}
                 else {
                    p.randomSelect();
                 }
@@ -106,7 +127,7 @@ applyRules();
                 if(containsCard(p) == true){
                     do{
                         p.ruleBasedSelect(trump);
-                    } while(checkSuit(p.getPlayCard()) == false);}
+                    } while(checkSuit(p) == false);}
                 else {
                     p.ruleBasedSelect(trump);
                 }
@@ -126,7 +147,7 @@ public void playerSelect(Player p){
     System.out.println("Select Card to Play");
      n = reader.nextInt();
 p.setPlayCard(p.getCard(n));}
-    while (checkSuit(p.getPlayCard()) == false);}
+    while (checkSuit(p) == false);}
     else{
         System.out.println("Trump: " + getTrump().toString());
         System.out.println("Select Card to Play");
@@ -142,11 +163,12 @@ public void applyRules(){
     System.out.println("---------------------------");
     changeDealer();
 }
-    public boolean checkSuit(Card p){
-        if(p.getValue() != 'w'){
-            if( p.getSuit() != players.get(0).getPlayCard().getSuit() ){
-                if(p.getSuit() != trump.getSuit()){
-                    System.out.println("Play Card isn't equal to trump or Dealers Suit");
+    public boolean checkSuit(Player p){
+        if(p.getPlayCard().getValue() != 'w'){
+            if( p.getPlayCard().getSuit() != players.get(0).getPlayCard().getSuit() ){
+                if(p.getPlayCard().getSuit() != trump.getSuit()){
+                    if(p.isAI == false){
+                    System.out.println("Play Card isn't equal to trump or Dealers Suit");}
                     return false;}
                 return true;
             }
@@ -189,13 +211,26 @@ public void biddingforRound(){
         }
     }
 }
+public void playSimRound(){
+    Player p  = players.getLast();
+    do{
+        playSimHand();
+    } while(p.hand.size() > 0);
+    Rules r = new Rules(players,trump);
+    r.scoring();
+    for(int i=0; i<players.size(); i++){
+        System.out.println(players.get(i).getScore());
+    }
+    check();
+}
+
 public void playRound(){
     roundSetup();
     biddingforRound();
    Player p  = players.getLast();
 
     do{
-        playRuleBasedHand();
+        playHand();
     } while(p.hand.size() > 0);
     Rules r = new Rules(players,trump);
     r.scoring();
@@ -204,6 +239,7 @@ public void playRound(){
     }
     check();
 }
+
    public void changeDealer() {
         for(int i=0; i < players.size(); i++){
             players.get(i).setPlayCard(null);

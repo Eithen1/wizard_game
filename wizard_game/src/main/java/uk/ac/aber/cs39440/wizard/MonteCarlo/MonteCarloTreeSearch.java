@@ -2,12 +2,12 @@ package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 
 import main.java.uk.ac.aber.cs39440.wizard.core.*;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-
  /**
- Reference from for cr4eeaqting a MCTS with UCT.
+ Reference from for creating a MCTS with UCT.
   https://github.com/eugenp/tutorials/blob/master/algorithms-miscellaneous-1/src/main/java/com/baeldung/algorithms/mcts/montecarlo/M
 
   **/
@@ -16,38 +16,40 @@ public class MonteCarloTreeSearch {
 Game game = new Game();
 LinkedList<Player> players;
 Player ai;
-Node[] children;
 int bid;
 Deck deck;
+Card trump;
 
 
-public Card findNextMove(Player ai, LinkedList<Player> p, int bid, Deck d){
-    this.ai = ai;
-    this.players = p;
-    this.bid = bid;
-    this.deck = d;
+
+public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
+    this.ai = new Player(ai);
+    this.players = new LinkedList<>((Collection<? extends Player>) p.clone());
+    this.bid = ai.getBid();
+    this.deck =  d;
+    this.trump = new Card(trump);
     int iterations = 0;
-
+    GameState gameState = new GameState(deck,players,ai);
     long start = System.currentTimeMillis();
     long end = start + 60;
     Tree tree = new Tree();
     Node rootNode = tree.getRoot();
-    rootNode.getState().setPlayers(players);
+    rootNode.setState(gameState);
 
   //  while(System.currentTimeMillis() < end)
-     while(iterations < 40) {
+    while(iterations < 2) {
 
-        //Selection
-        Node promisingNode = selection(rootNode);
+       // Selection
+       Node promisingNode = selection(rootNode);
 
-        // Expansion
-        if(promisingNode.getState().getWins() != bid){
-            expandNode(promisingNode);
+       // Expansion
+        if(promisingNode.getState().getPlayers().getLast().getHand().size() > 0){
+           expandNode(promisingNode);
         }
 
         //Simulation
         Node nodeToExplore = promisingNode;
-        if(promisingNode.getChildren().size() >0){
+        if(promisingNode.getChildren().size() > 0){
             nodeToExplore = promisingNode.getRandomChildNode();
         }
         int playoutResult = simulateRandomPlay(nodeToExplore);
@@ -55,7 +57,7 @@ public Card findNextMove(Player ai, LinkedList<Player> p, int bid, Deck d){
         //Update
        backPropogation(nodeToExplore,playoutResult);
        iterations++;
-    }
+   }
 Node winner = rootNode.getChildWithMaxScore();
     tree.setRoot(winner);
     return winner.getState().getAi().getPlayCard();
@@ -69,7 +71,8 @@ while(node.getChildren().size() !=0){
 return node;
 }
 
-private void expandNode(Node node){
+
+    private Node expandNode(Node node){
     List<GameState> possibleStates = node.getState().getAllStates();
     possibleStates.forEach(gameState -> {
         Node newNode = new Node(gameState);
@@ -77,54 +80,37 @@ private void expandNode(Node node){
         newNode.getState().setPlayers(node.getState().getPlayers());
         node.getChildren().add(newNode);
     });
-}
+    Player p = node.getState().getPlayers().getFirst();
+    for(int i=0; i< p.getHand().size();i++){
+        if(p.getPlayCard() == p.getHand().get(i)){
+            p.getHand().remove(i);
+        }
+    }
+         return node;
+     }
 
 private void backPropogation(Node nodeToExplore, int wins){
     Node tempNode = nodeToExplore;
-    while (tempNode != null){
+    while (tempNode != null) {
         tempNode.getState().incrementVisit();
-        if(wins == bid){
-            tempNode = tempNode.getParent();
-        }
+        tempNode.getState().addScore(tempNode.getState().winsSim());
+        tempNode = tempNode.getParent();
     }
 }
 private int simulateRandomPlay(Node n){
     Node tempNode = new Node(n);
-    GameState tempState = tempNode.getState();
-    int wins = tempState.getWins();
+    GameState tempState =  new GameState(tempNode.getState());
+    int wins = tempState.getSimWins();
+    LinkedList<Player> p = new LinkedList<Player>((Collection<? extends Player>) tempNode.getState().getPlayers().clone());
+        Round r = new Round(deck,p);
+       r.setTrump(trump);
+       r.playSimRound();
+       wins = tempState.winsSim();
 
-    if(tempState.getAi() == tempState.getPlayers().get(0)){
-        tempNode.getParent().getState().setWins(Integer.MIN_VALUE);
-        return wins ;
-    }
-
-
-
-        for(int i=0; i < tempState.getPlayers().size(); i++){
-       playRandomHand();
-       wins = tempState.getWins();
-    }
 
 return wins;
 }
 
-     public void playRandomHand() {
-         Round r = new Round(deck,players);
 
-         for(int i=0; i<=2; i++){
-             Player p = players.get(i);
-             Card c = new Card();
-             if(r.containsCard(p) == true){
-                     do{
-                         p.randomSelect();
-                     } while(r.checkSuit(p.getPlayCard()) == false);}
-                 else {
-                    p.randomSelect();
-                 }
-                 p.getHand().remove(p.getPlayCard());
-             }
 
-        r.applyRules();
-
-     }
 }

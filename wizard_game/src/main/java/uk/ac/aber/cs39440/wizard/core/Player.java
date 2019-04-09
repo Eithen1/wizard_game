@@ -6,21 +6,30 @@ import java.util.Random;
 
 public class Player {
 
+    int playerID;
     ArrayList<Card> hand;
     int bid;
-    int Score;
+    int score;
     Card playCard;
     int tricksWon;
     boolean isAI =true;
-    boolean isDealer= false;
 
     public Player() {
+        this.playerID = 0;
         this.hand = new ArrayList<>();
         this.bid = bid;
         this.playCard = playCard;
         this.tricksWon = tricksWon;
     }
-
+public Player(Player p){
+        this.playerID = p.getPlayerID();
+        this.hand = p.getHand();
+        this.bid = p.getBid();
+        this.playCard = p.getPlayCard();
+        this.tricksWon = p.getTricksWon();
+        this.score = p.getScore();
+        this.isAI = p.isAI();
+}
 
     public void populateHand(Deck deck) {
         for (int i = 0; hand.size()< 15; i++) {
@@ -31,6 +40,15 @@ public class Player {
             }
             deck.removeCard(i);
         }
+    }
+
+
+    public int getPlayerID() {
+        return playerID;
+    }
+
+    public void setPlayerID(int playerID) {
+        this.playerID = playerID;
     }
 
     public ArrayList<Card> getHand() {
@@ -62,11 +80,11 @@ public Card getCard(int i){
     }
 
     public int getScore() {
-        return Score;
+        return score;
     }
 
     public void setScore(int score) {
-        Score = score;
+        this.score = score;
     }
 
     public int getTricksWon() {

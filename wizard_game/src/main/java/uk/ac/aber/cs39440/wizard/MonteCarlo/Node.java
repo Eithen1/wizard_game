@@ -1,9 +1,5 @@
 package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 
-import com.sun.xml.internal.bind.marshaller.NioEscapeHandler;
-import main.java.uk.ac.aber.cs39440.wizard.core.Card;
-import main.java.uk.ac.aber.cs39440.wizard.core.Game;
-
 import java.util.*;
 
 public class Node {
@@ -69,10 +65,25 @@ public  Node(Node parent, GameState  State , List<Node> children){
     }
 
     public Node getChildWithMaxScore() {
-        return Collections.max(this.children, Comparator.comparing(c -> {
-                 return c.getState().getVisitCount();}
-                 ));
+   Node winner = new Node();
+for(int i=0; i<children.size(); i++){
+    if(children.get(i) == children.get(0)){
+        winner = children.get(0);
     }
+
+   int winnerScore = 0;
+    int otherscore =0;
+    if(children.get(i).getState().getVisitCount() >0){
+
+          otherscore = children.get(i).getState().getSimWins() / children.get(i).getState().getVisitCount();
+    }
+    if (winnerScore <= otherscore){
+      winner = children.get(i);
+    }
+}
+return winner;
+    }
+
 
 
 }

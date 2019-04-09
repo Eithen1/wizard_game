@@ -5,10 +5,15 @@ public class Card {
     Suit suit;
     int number;
 
-public Card(){
+public Card() {
 
 }
-    public Card(Suit suit, char value, int number) {
+public Card(Card c){
+    this.suit = c.getSuit();
+    this.value = c.getValue();
+    this.number = c.getNumber();
+    }
+public Card(Suit suit, char value, int number) {
         this.suit = suit;
         this.value = value;
         this.number = number;

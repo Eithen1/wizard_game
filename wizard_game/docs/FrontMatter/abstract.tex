@@ -4,8 +4,10 @@
 
 \section*{\centering Abstract}
 
-Include an abstract for your project. This should be approximately 300 words. 
+For this project i will be creating a Wizard Card Game which will be used to have an environment for a Monte Carlo Tree Search Artificial Intelligence. Wizard is a Card Game which a normal 52 card deck and 4 wizard and jester cards. Wizards are the highest and jesters are the lowest cards in the game. In the game bid for a round and try to win as many tricks in that round as possible, if you$'$re closer to your original bid the more point you will score. A trick can be won by having the highest card that match the trump suit(the card played after the hands are handed out) or the dealer$'$s suit. Another way to win is by play a wizard card which trumps all other cards. Once the rounds are over the person with the highest score wins.
 
-The abstract is an overview of the work you have done. Highlight the purpose of the work and the key outcomes of the work.
+The Monte Carlo Tree Search is the AI technique I will be using which involves creating a tree from the state that the game is currently in. This is then randomly expanded by selecting a card to play. It will then select a state from the ones that have been expanded. This will then simulate a game and will provide a score for how close it was to the original bid and give the score to the original child state. This is then repeated for a specified amount of time, then the one that has the highest ratio of score to how many times it is visited, this will then give the best card to be played.
+
+
 
 %TC:endignore

@@ -8,6 +8,8 @@ public class Deck {
     ArrayList<Card> deck = new ArrayList<>();
     char values[] = {'2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a'};
 int numbers[] = {2,3,4,5,6,7,8,9,10,11,12,13,14};
+Boolean isShuffled;
+
 
     public ArrayList<Card> getDeck() {
         return deck;
@@ -54,7 +56,7 @@ int numbers[] = {2,3,4,5,6,7,8,9,10,11,12,13,14};
         }
 addJester();
         addwizard();
-
+isShuffled = false;
     }
 
     public void shuffle(){
@@ -66,6 +68,7 @@ addJester();
             deck.set(i,j);
             deck.set(jposition,temp);
         }
+        isShuffled =true;
     }
  public void printDeck(){
         for (int i = 0; i < deck.size(); i++){
@@ -86,5 +89,9 @@ public void delete(){
         for(int i=0; i <= deck.size(); i++){
             deck.remove(i);
         }
+}
+
+public boolean isShuffled(){
+        return isShuffled;
 }
 }

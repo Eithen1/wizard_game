@@ -3,18 +3,13 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 
 import java.util.LinkedList;
 
-public class Rules extends Round{
+public class Rules{
     private LinkedList<Player> players;
     public Player winner;
     public  Card trump;
 
-    @Override
-    public void setTrump(Card trump) {
-        this.trump = trump;
-    }
-
     public Rules(LinkedList<Player> players, Card trump){
-        this.players = players;
+        this.players =players;
         winner = new Player();
         this.trump = trump;
     }
@@ -26,7 +21,7 @@ public class Rules extends Round{
     }
     public void numberRule(Player p){
         if(winner.playCard.getNumber() < p.playCard.getNumber()){
-            winner = p;
+            setWinner(p);
         }
     }
 
@@ -35,7 +30,7 @@ public class Rules extends Round{
                  numberRule(p);
                }
 else if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().getSuit() != p.getPlayCard().getSuit()){
-                winner = p;
+                setWinner(p);
             }
 
    }
@@ -43,15 +38,18 @@ else if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().get
    public void wizardRule(){
         for (int i=0; i<players.size(); i++){
             Player p = players.get(i);
-            if((p.getPlayCard().getValue() == 'w' && winner.getPlayCard().getValue() != 'w') || winner.getPlayCard() == null){
-                winner = p;
+            if(winner.getPlayCard() != null){
+                if ((p.getPlayCard().getNumber() == 15 && winner.getPlayCard().getNumber() != 15) || winner.getPlayCard().getNumber() == 1) {
+                    setWinner(p);
+                } else if(winner.getPlayCard().getNumber() != 15) {
+                    suitRule(p);
+                }
             }
-            else {
-                suitRule(p);
+            else{
+                setWinner(p);
             }
         }
    }
-
    public void scoringTrick(){
         wizardRule();
         winner.tricksWon++;
