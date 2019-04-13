@@ -73,19 +73,12 @@ for(int i=0; i<=2; i++){
             } else {
                 p.handToString();
             MonteCarloTreeSearch m = new MonteCarloTreeSearch();
-        c  =    m.findNextMove(p, players,deck,trump);
-        p.setPlayCard(c);
-                if(containsCard(p) == true){
-                do{
-               c   =  m.findNextMove(p,players,deck,trump);
-               p.setPlayCard(c);
-                } while(checkSuit(p) == false);}
-                else {
-                  c =  m.findNextMove(p,players,deck,trump);
-                  p.setPlayCard(c);
-                }
+
+               p.setPlayCard(m.findNextMove(p,players,deck,trump));}
+
+                System.out.println(p.getPlayCard().toString());
                 p.getHand().remove(p.getPlayCard());
-            }
+
 
 }
 
@@ -211,8 +204,14 @@ public void biddingforRound(){
         }
     }
 }
-public void playSimRound(){
-    Player p  = players.getLast();
+public void playSimRound(int id){
+
+    Player p = new Player();
+    for(int i=0; i< players.size(); i++){
+        if(players.get(i).getPlayerID() == id){
+            p = players.get(i);
+        }
+    }
     do{
         playSimHand();
     } while(p.hand.size() > 0);

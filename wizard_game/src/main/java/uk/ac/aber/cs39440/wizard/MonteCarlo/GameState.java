@@ -12,7 +12,7 @@ public class GameState {
 
     private static Deck cardsUsed = new Deck();
   private   LinkedList<Player> players;
-   private static Player ai = new Player();
+   private Player ai = new Player();
     int wins = ai.getTricksWon();
    int simWins = 0;
     int visitCount;
@@ -24,7 +24,10 @@ public GameState(){
 
 public GameState(Deck deck, LinkedList<Player> players, Player ai){
     this.cardsUsed = deck;
-    this.players = new LinkedList<>((Collection<? extends Player>) players.clone());
+    this.players  = new LinkedList<Player>();
+    for(int i =0; i<players.size(); i++){
+             this.players.add(new Player(players.get(i)));
+    }
     this.ai = new Player(ai);
 }
 
@@ -32,7 +35,10 @@ public GameState(Deck deck, LinkedList<Player> players, Player ai){
 
 
 public GameState(GameState state){
-    this.players = new LinkedList<Player>((Collection<? extends Player>) state.getPlayers().clone());
+    this.players = new LinkedList<Player>();
+    for(int i =0; i<state.players.size(); i++){
+        this.players.add(new Player(state.players.get(i)));
+    }
     this.visitCount = state.getVisitCount();
     this.wins = state.getWins();
     this.ai = state.getAi();
@@ -86,32 +92,34 @@ public GameState(GameState state){
         this.players = players;
     }
 
-   public List<GameState> getAllStates(){
+   public List<GameState> getAllStates() {
 
-        List<GameState> possibleStates= new ArrayList<>();
-
-
-
-    for(int i = players.getFirst().getHand().size(); i!= 0; i-- ){
-        GameState newState = new GameState();
-        LinkedList<Player> p = new LinkedList<>((Collection<? extends Player>) getPlayers().clone());
-        newState.getAi().setPlayCard(ai.getHand().get(0));
-        newState.setPlayers(new LinkedList<>(p));
-        for(int j=0; j < players.size(); j++) {
-            ArrayList<Card> hand = new ArrayList<>(newState.getPlayers().get(j).getHand());
-
-            if (ai.getPlayerID() == p.get(j).getPlayerID()) {
-                p.get(j).setPlayCard(p.get(j).getHand().get(0));
-                p.get(j).getHand().remove(i);
-                possibleStates.add(newState);
+       List<GameState> possibleStates = new ArrayList<>();
+       int k = players.getFirst().getHand().size();
+        for(int y=0; y <players.size(); y++) {
+            if(players.get(y).getHand().size() < k){
+                k= players.get(y).getHand().size();
             }
         }
-        }
+
+       for (int i = 0; i < players.getFirst().getHand().size(); i++) {
+           GameState newState = new GameState(this);
+           LinkedList<Player> p = newState.getPlayers();
+           newState.setPlayers(new LinkedList<>(p));
+           for (int j = 0; j < p.size(); j++) {
+               ArrayList<Card> hand = p.get(j).getHand();
+
+               if (ai.getPlayerID() == p.get(j).getPlayerID()) {
+                   p.get(j).setPlayCard(hand.get(i));
+                   p.get(j).getHand().remove(i);
+                   possibleStates.add(newState);
+               }
+           }
+       }
 
 
-
-    return null;
-    }
+       return possibleStates;
+   }
 
 
     public void incrementVisit(){
@@ -129,18 +137,19 @@ public GameState(GameState state){
     public int winsSim(){
     int i = ai.getPlayerID();
     setAIafterRound();
-    if(ai.getTricksWon() == ai.getBid()){
-        return 5;
-    }
-    else if(ai.getTricksWon() < ai.getBid()+2 && ai.getTricksWon() > ai.getBid()) {
-       return 3;
+    for(int j=0; j<players.size(); j++) {
+        if(i == players.get(j).getPlayerID())
+        if (players.get(j).getTricksWon() == players.get(j).getBid()) {
+            return 5;
+        } else if (players.get(j).getTricksWon() < players.get(j).getBid() + 2 && players.get(j).getTricksWon() > players.get(j).getBid()) {
+            return 3;
+        } else if (players.get(j).getTricksWon() > players.get(j).getBid() - 2 && players.get(j).getTricksWon() < players.get(j).getBid()) {
+            return 2;
+        } else {
+            return 1;
         }
-    else if(ai.getTricksWon() > ai.getBid()-2 && ai.getTricksWon() < ai.getBid()) {
-        return 2;
     }
-    else{
-    return 1;
-    }
+    return Integer.parseInt(null);
     }
 
 

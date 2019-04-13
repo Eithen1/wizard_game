@@ -14,8 +14,7 @@ public Node(){
 }
 
 public Node(GameState gameState){
-this.state = new GameState();
-children = new ArrayList<>();
+this.state = gameState;
 }
 
 public  Node(Node parent, GameState  State , List<Node> children){
@@ -27,11 +26,14 @@ public  Node(Node parent, GameState  State , List<Node> children){
     public Node(Node node) {
         this.children = new ArrayList<>();
         this.state = new GameState(node.getState());
-        if (node.getParent() != null)
+        if (node.getParent() != null){
             this.parent = node.getParent();
         List<Node> childArray = node.getChildren();
+        if(childArray !=null){
         for (Node child : childArray) {
-            this.children.add(new Node(child));
+            this.getChildren().add(new Node(child));
+        }
+        }
         }
     }
     public Node getParent() {

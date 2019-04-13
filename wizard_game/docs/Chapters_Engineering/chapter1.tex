@@ -2,34 +2,34 @@
 
 
 \section{Background}
-In this section I will be talking about the Wizard Card Game, how the game works and how you can win the game. I will also discuss the Artificial Intelligence techniques that were consider using for the opponents,which are neural networks, minmax and Monte Carlo algorithms. This will be expanded upon to how i came to the conclusion of using the Monte Carlo Tree search for this game.
+In this section I will be talking about the Wizard Card Game, how the game works and how you can win the game and show in the this video\cite{wizardVideo}. I will also discuss the Artificial Intelligence techniques that were consider using for the opponents, which are neural networks, minmax and Monte Carlo algorithms. This will be expanded upon to how I concluded using the Monte Carlo Tree search for this game.
 \subsection{Wizard Card Game}
 \subsubsection{Dealing and Setup}
-Wizard is a card game that contains 52 normal deck cards and 8 extra cards 4 of which are called wizards and the other 4 are called jesters.  Each player is dealt the same number of cards that is the round. For example, round 1 means each person get 1 card but round 10 means they each get ten cards. This is then played until the is no cards left to be dealt out mean for 3 people there should be 20 round and 15 rounds for 4 people.  A trump card is also dealt from the deck at the beginning of the round from the top.  After each play in a round the dealer is changed clockwise.
+Wizard is a card game that contains 52 normal deck cards and 8 extra cards 4 of which are called wizards and the other 4 are called jesters\cite{wizardOver}.  Each player is dealt the same number of cards that is the round. For example, round 1 means each person get 1 card but round 10 means they each get ten cards. This is then played until the is no cards left to be dealt out mean for 3 people there should be 20 round and 15 rounds for 4 people.  A trump card is also dealt from the deck at the beginning of the round from the top.  After each play in a round the dealer is changed clockwise.
 \subsubsection{Playing and Bidding}
 One the trump has been dealt, the person to the left of the dealer states how many tricks they think they will win in this round. The maximum they can bid it the number of cards they have in their hands.  Once everyone has put their individual bids in, the player to the left of the dealer puts down the first card which can be any card they want, then each player can either match the suit that the first player put down or the better play it to match the trump suit or play a wizard to win. Otherwise they can play off suit or play a jester to lose.
 \subsubsection{Scoring}
-To score points in this game you must use the bid on how many tricks you think you can win, giving you 20 point for being right and 10 point for every trick you win. Otherwise you get negative 10 point per every trick you were over or under for that round.  For example, if you guess 4 tricks to win and only one 1 you would lose 30 points. 
+To score points in this game you must use the bid on how many tricks you think you can win, giving you 20 point for being right and 10 point for every trick you win. Otherwise you get negative 10 point per every trick you were over or under for that round. For example, if you guess 4 tricks to win and only one 1 you would lose 30 points. 
 
 
 \subsection {Monte Carlo Alogrithm}
-The Monte Carlop Algorithm is probilistic search alogrithm that 
-
+The Monte Carlo Algorithm is probilistic search alogrithm that creates a tree based on the current states of the problem. This is then randomly expanded from the root node and simulated what might happen, under specfic constrains such a iterations of the simulation or under an amount time. This will then gvie a score back on what how well the simulation wen. once this is done the best option will be picked based on what has the higest score from the tree that has currently been created.  The next sections belows wil show the 4 phases that are used in the algorithm.
 \subsubsection{Selection}
+For this plase in the algorithms it will start with the root node that shows the intial state of the game. This will then select the child node that has the best win rating. 
 \subsubsection{Expansion}
 \subsubsection{Simulation}
 \subsubsection{Backpropagation}
 \subsection{Similar Algorithms}
-
+In this section, I will be talking abolu the two other Algorithms that could of been used for the Artifical intelligence of the game. I will also discuss why they werent used and why the Monte Carlo Tree Search was the one i picked.
 \subsubsection{Neural Network}
-
+Neural Network are artifically created based on the neuronal structure of the mamalian cerebral cortex but on much smaller scales.\cite{NeuralNetwork}
 \subsubsection{MinMax}
 
 
 \section{Analysis}
 In this section I will be talking about what I will be aiming doing achieve with this product and what technology I will be using during this process. 
 \subsection{Project Aims}
-The aim for this project is create a 
+The aim for this project is create a functional software version of the card game Wizard. This will also contain an Artifical intelligence Opponent that uses the Monte Carlo Algorithm to select a card for that round. The game will be simplified to only have 3 players, two of whihc will be the AI and one which is the human player. Each player will have 15 cards each and play until there are no cards left for 5 rounds. 
 \subsection {Technology Overview}
 \subsubsection{Programming Language}
 Use Java
@@ -39,4 +39,7 @@ Say Specifiction of Harware used, and not need be helpful for faster processing 
 \subsection {Foreseen Challenges}
 applying Rules, Implementiong MonteCarlo Tree search and optimising
 \subsection {Process Methodology}
-There was alot of options for developing my
+There was a lot of options for developing my project. In the end I decide to you a agile approach based on Scrum. This would give me an iterative way of progressing in the project, use the sprints in the methodology to progressively improve on the previous work that I have done, adding more functionality and complexity to it as it is being developed.I feel this was a better option that a traditional process such as the waterfall model. This is because I can start work on the software whilst writing up the report without having to do redo all the work I have previously done when changes are made to the design of the software.
+\subsubsection{Version Control}
+
+

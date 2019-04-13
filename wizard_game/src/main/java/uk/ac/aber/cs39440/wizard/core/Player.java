@@ -23,7 +23,7 @@ public class Player {
     }
 public Player(Player p){
         this.playerID = p.getPlayerID();
-        this.hand = p.getHand();
+        this.hand = (ArrayList<Card>) p.getHand().clone();
         this.bid = p.getBid();
         this.playCard = p.getPlayCard();
         this.tricksWon = p.getTricksWon();
@@ -110,8 +110,9 @@ public Card getCard(int i){
     public void randomSelect() {
         Random r = new Random();
         int i = r.nextInt(hand.size());
-        setPlayCard(hand.get(i));
-
+        if(hand.size() != 0) {
+            setPlayCard(hand.get(i));
+        }
     }
 
     public void ruleBid(Card trump){
@@ -188,8 +189,7 @@ public Card getCard(int i){
             setPlayCard(OtherPriority.getLast());
         }
     }
- public void MonteCarlo(){
 
- }
+
 }
 

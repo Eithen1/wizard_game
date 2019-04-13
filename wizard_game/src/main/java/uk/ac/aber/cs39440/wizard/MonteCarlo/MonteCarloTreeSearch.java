@@ -13,7 +13,6 @@ import java.util.List;
   **/
 public class MonteCarloTreeSearch {
 
-Game game = new Game();
 LinkedList<Player> players;
 Player ai;
 int bid;
@@ -24,7 +23,10 @@ Card trump;
 
 public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
     this.ai = new Player(ai);
-    this.players = new LinkedList<>((Collection<? extends Player>) p.clone());
+    this.players = new LinkedList<>();
+    for(int i =0; i<p.size();i++){
+        this.players.add(new Player(p.get(i)));
+    }
     this.bid = ai.getBid();
     this.deck =  d;
     this.trump = new Card(trump);
@@ -36,8 +38,9 @@ public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
     Node rootNode = tree.getRoot();
     rootNode.setState(gameState);
 
-  //  while(System.currentTimeMillis() < end)
-    while(iterations < 2) {
+
+  while(iterations < 100
+          ) {
 
        // Selection
        Node promisingNode = selection(rootNode);
@@ -60,13 +63,20 @@ public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
    }
 Node winner = rootNode.getChildWithMaxScore();
     tree.setRoot(winner);
-    return winner.getState().getAi().getPlayCard();
+    Card winningCard  = new Card();
+    for(int i=0; i<winner.getState().getPlayers().size();i++){
+        if(winner.getState().getPlayers().get(i).getPlayerID() == winner.getState().getAi().getPlayerID() ){
+            winningCard = winner.getState().getPlayers().get(i).getPlayCard();
+        }
+    }
+    return winningCard;
 }
 
 private Node selection(Node rootNode){
 Node node =rootNode;
-while(node.getChildren().size() !=0){
-    node = UCT.findBestNodeWithUCT(node);
+while(node.getChildren().size() !=0 ){
+    Node newnode = new Node(UCT.bestChild(node));
+    node = newnode;
 }
 return node;
 }
@@ -77,15 +87,8 @@ return node;
     possibleStates.forEach(gameState -> {
         Node newNode = new Node(gameState);
         newNode.setParent(node);
-        newNode.getState().setPlayers(node.getState().getPlayers());
         node.getChildren().add(newNode);
     });
-    Player p = node.getState().getPlayers().getFirst();
-    for(int i=0; i< p.getHand().size();i++){
-        if(p.getPlayCard() == p.getHand().get(i)){
-            p.getHand().remove(i);
-        }
-    }
          return node;
      }
 
@@ -100,11 +103,14 @@ private void backPropogation(Node nodeToExplore, int wins){
 private int simulateRandomPlay(Node n){
     Node tempNode = new Node(n);
     GameState tempState =  new GameState(tempNode.getState());
-    int wins = tempState.getSimWins();
-    LinkedList<Player> p = new LinkedList<Player>((Collection<? extends Player>) tempNode.getState().getPlayers().clone());
+    int wins;
+    LinkedList<Player> p = new LinkedList<>();
+    for(int i=0; i <tempState.getPlayers().size(); i++){
+        p.add(new Player(tempState.getPlayers().get(i)));
+    }
         Round r = new Round(deck,p);
-       r.setTrump(trump);
-       r.playSimRound();
+    r.setTrump(trump);
+       r.playSimRound(ai.getPlayerID());
        wins = tempState.winsSim();
 
 
