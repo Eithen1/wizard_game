@@ -5,8 +5,8 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Random;
 
-public class UCT {
-   public static double uctValue(int totalVisit, int nodeWins, int nodeVisit) {
+class UCT {
+   private static double uctValue(int totalVisit, int nodeWins, int nodeVisit) {
        if (nodeVisit == 0) {
            return Integer.MAX_VALUE;
        }

@@ -2,7 +2,6 @@ package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 
 import main.java.uk.ac.aber.cs39440.wizard.core.*;
 
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
   **/
 public class MonteCarloTreeSearch {
 
-LinkedList<Player> players;
+private LinkedList<Player> players;
 Player ai;
 int bid;
 Deck deck;
@@ -58,7 +57,7 @@ public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
         int playoutResult = simulateRandomPlay(nodeToExplore);
 
         //Update
-       backPropogation(nodeToExplore,playoutResult);
+       backPropogation(nodeToExplore);
        iterations++;
    }
 Node winner = rootNode.getChildWithMaxScore();
@@ -75,24 +74,22 @@ Node winner = rootNode.getChildWithMaxScore();
 private Node selection(Node rootNode){
 Node node =rootNode;
 while(node.getChildren().size() !=0 ){
-    Node newnode = new Node(UCT.bestChild(node));
-    node = newnode;
+    node = new Node(UCT.bestChild(node));
 }
 return node;
 }
 
 
-    private Node expandNode(Node node){
+    private void expandNode(Node node){
     List<GameState> possibleStates = node.getState().getAllStates();
     possibleStates.forEach(gameState -> {
         Node newNode = new Node(gameState);
         newNode.setParent(node);
         node.getChildren().add(newNode);
     });
-         return node;
-     }
+    }
 
-private void backPropogation(Node nodeToExplore, int wins){
+private void backPropogation(Node nodeToExplore){
     Node tempNode = nodeToExplore;
     while (tempNode != null) {
         tempNode.getState().incrementVisit();

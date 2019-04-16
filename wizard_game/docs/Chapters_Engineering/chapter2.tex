@@ -1,6 +1,37 @@
 %\addcontentsline{toc}{chapter}{Development Process}
 \chapter{Design}
 
+\section{Overall Architecture}
+
+\subsection{Class Descriptions}
+\subsubsection{Game Classes}
+\paragraph{Card}
+This Card class created Card objects that will contain variables for the suit, the value of the card in relation to the other and the number displayed on the card such as a wizards or an ace. It will also contain methods to construct the card and getters ans setters for each of the variables. Card will also contain a copying constructor for the use of the AI. This class wil mainly be used in the generation of the deck but will also be used in the sel
+\paragraph{Deck}
+Deck is a class for create a deck object to be used in the 
+\paragraph{Player}
+\paragraph{Round}
+\paragraph{Rules}
+\paragraph{Game}
+\paragraph{Suit}
+\paragraph{Main}
+\subsubsection{Aritifical Intelligence Classes}
+This section will show you the classes associated with Monte Carlo Tree Search AI. 
+\paragraph{Node}
+
+\paragraph{Tree}
+\paragraph{GameState}
+\paragraph{MonteCarloTreeSearch}
+\paragraph{UCT}
+
+\subsection{Data Flow Diagrams}
+\section{Some detailed design}
+In this section i will outline the important Algorithms to be used in the program and discuss how the User interface will looked and function.
+\subsection{Algorithm Design}
+\section{User Interface}
+As this project is mainly based on the Artifical Intelligence, only a simple User interface is needed. So using a Terminal UI seems the best choice.This will include showing the cards that the player has in there hand and the card they will play. This interface will also allow you to bid at the beginning of the round after the trump card and hands have been given out. After the round has been completed it shows the amount of tricks that has been won, the score they have recieved based on there bid and trick they have won.
+\section{Other relevant sections}
+
 You should concentrate on the more important aspects of the design. It is essential that an overview is presented before going into detail. As well as describing the design adopted it must also explain what other designs were considered and why they were rejected.
 
 The design should describe what you expected to do, and might also explain areas that you had to revise after some investigation.
@@ -12,29 +43,3 @@ How much material you include on detailed design and implementation will depend 
 You should also identify any support tools that you used. You should discuss your choice of implementation tools - programming language, compilers, database management system, program development environment, etc.
 
 Some example sub-sections may be as follows, but the specific sections are for you to define. 
-
-\section{Overall Architecture}
-\subsection{Class Descriptions}
-\subsubsection{Game Classes}
-\paragraph{Card}
-\paragraph{Deck}
-\paragraph{Player}
-\paragraph{Round}
-\paragraph{Rules}
-\paragraph{Game}
-\paragraph{Suit}
-\paragraph{Main}
-\subsubsection{Aritifical Intelligence Classes}
-\paragraph{Node}
-\paragraph{Tree}
-\paragraph{GameState}
-\paragraph{MonteCarloTreeSearch}
-\paragraph{UCT}
-\subsection{Data Flow Diagrams}
-
-\section{Some detailed design}
-In this section i will outline the important Algorithms to be used in the program and discuss how the User interface will looked and function.
-\subsection{Algorithm Design}
-\section{User Interface}
-
-\section{Other relevant sections}

@@ -8,17 +8,17 @@ import java.util.Scanner;
 
 public class Round{
 
-    private Scanner reader = new Scanner(System.in);
-    public  Deck deck;
+    private final Scanner reader = new Scanner(System.in);
+    private Deck deck;
     private LinkedList<Player> players   = new LinkedList<>();
-public  Card trump;
+private Card trump;
 
     public Round() {
     }
 
 
 
-    public Card getTrump() {
+    private Card getTrump() {
         return trump;
     }
 
@@ -44,13 +44,13 @@ public Round(Deck deck, LinkedList<Player> players){
     }
 }
 
-public void playSimHand(){
+private void playSimHand(){
     for(int i=0; i<=2; i++){
 
         Player p = players.get(i);
         if(p.getPlayCard() == null)
 
-            if(containsCard(p) == true){
+            if(containsCard(p)){
                 do{
                     p.randomSelect();
                 } while(checkSuit(p) == false);}
@@ -64,7 +64,7 @@ public void playSimHand(){
     applyRules();
 }
 
-public void playHand() {
+private void playHand() {
 for(int i=0; i<=2; i++){
     Player p = players.get(i);
     Card c;
@@ -131,7 +131,7 @@ applyRules();
 
         applyRules();
     }
-public void playerSelect(Player p){
+private void playerSelect(Player p){
     p.handToString();
     int n;
     if(containsCard(p) == true){
@@ -150,13 +150,13 @@ p.setPlayCard(p.getCard(n));}
 
     p.getHand().remove(n);
 }
-public void applyRules(){
+private void applyRules(){
     Rules r = new Rules(players, trump);
     r.scoringTrick();
     System.out.println("---------------------------");
     changeDealer();
 }
-    public boolean checkSuit(Player p){
+    private boolean checkSuit(Player p){
         if(p.getPlayCard().getValue() != 'w'){
             if( p.getPlayCard().getSuit() != players.get(0).getPlayCard().getSuit() ){
                 if(p.getPlayCard().getSuit() != trump.getSuit()){
@@ -168,7 +168,7 @@ public void applyRules(){
         }
         return true;
     }
-public boolean containsCard(Player p){
+private boolean containsCard(Player p){
 
     if(p != players.get(0)){
         for(int i=0; i < p.getHand().size(); i++){
@@ -183,13 +183,13 @@ public boolean containsCard(Player p){
 
 }
 
-public void check(){
+private void check(){
     for(int i=0; i<players.size();i++){
         System.out.println("Tricks Won "+players.get(i).getTricksWon() + " " + players.get(i));
     }
 }
 
-public void biddingforRound(){
+private void biddingforRound(){
     for(int i=0; i<=2; i++){
         Player p =players.get(i);
         if(p.isAI() == false){
@@ -239,7 +239,7 @@ public void playRound(){
     check();
 }
 
-   public void changeDealer() {
+   private void changeDealer() {
         for(int i=0; i < players.size(); i++){
             players.get(i).setPlayCard(null);
         }

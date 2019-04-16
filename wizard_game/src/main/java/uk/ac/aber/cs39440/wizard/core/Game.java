@@ -4,10 +4,10 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 import java.util.LinkedList;
 
 
-public class Game {
+class Game {
 
     private Deck deck;
-    private LinkedList<Player> players = new LinkedList<>();
+    private final LinkedList<Player> players = new LinkedList<>();
     private Round r = new Round(deck, players);
 
 
@@ -32,10 +32,8 @@ public class Game {
     }
 
     public void reSetup() {
-        deck = new Deck();
-        deck.generateDeck();
-        deck.shuffle();
-        r.roundSetup();
+        deck.reset();
+     r.roundSetup();
         for (int i = 0; i < 2; i++) {
             players.get(i).populateHand(deck);
         }
@@ -66,7 +64,7 @@ public class Game {
                 winner = players.get(i);
             }
         }
-        if (winner.isAI == false) {
+        if (!winner.isAI) {
             System.out.println("You Win!!!");
         } else {
             System.out.println("You Lose!!!");

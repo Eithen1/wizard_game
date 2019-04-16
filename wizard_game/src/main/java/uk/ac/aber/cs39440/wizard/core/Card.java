@@ -1,9 +1,9 @@
 package main.java.uk.ac.aber.cs39440.wizard.core;
 
 public class Card {
-    char value;
-    Suit suit;
-    int number;
+    private char value;
+    private Suit suit;
+    private int number;
 
 public Card() {
 
@@ -23,24 +23,12 @@ public Card(Suit suit, char value, int number) {
         return suit;
     }
 
-    public void setSuit(Suit suit) {
-        this.suit = suit;
-    }
-
     public char getValue() {
         return value;
     }
 
-    public void setValue(char value) {
-        this.value = value;
-    }
-
     public int getNumber() {
         return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
     }
 
     public String toString(){

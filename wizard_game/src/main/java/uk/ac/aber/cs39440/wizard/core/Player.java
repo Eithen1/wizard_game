@@ -6,10 +6,10 @@ import java.util.Random;
 
 public class Player {
 
-    int playerID;
-    ArrayList<Card> hand;
-    int bid;
-    int score;
+    private int playerID;
+    final ArrayList<Card> hand;
+    private int bid;
+    private int score;
     Card playCard;
     int tricksWon;
     boolean isAI =true;
@@ -138,7 +138,7 @@ public Card getCard(int i){
     /**
      * Created List of Cards that match the Suit of the Trump Card in the Players Hand
      */
-    public LinkedList<Card> ListOfTrumpSuit(Card trump){
+    private LinkedList<Card> ListOfTrumpSuit(Card trump){
         LinkedList<Card> TrumpPriority = new LinkedList<Card>();
         TrumpPriority.addAll(getHand());
         for(int i=TrumpPriority.size()-1; i > 0; i--){
@@ -151,7 +151,7 @@ public Card getCard(int i){
         return sortList(TrumpPriority);
     }
 
-    public LinkedList<Card> ListOfOtherSuit(Card trump){
+    private LinkedList<Card> ListOfOtherSuit(Card trump){
         LinkedList<Card> OtherPriority = new LinkedList<>();
         OtherPriority.addAll(getHand());
         for(int i=OtherPriority.size()-1; i >0; i--
@@ -164,7 +164,7 @@ public Card getCard(int i){
 
         return sortList(OtherPriority);
     }
-    public LinkedList<Card> sortList(LinkedList<Card> list){
+    private LinkedList<Card> sortList(LinkedList<Card> list){
 
             for(int j=0; j < list.size()-1; j++)
                 if(list.get(j).getNumber() > list.get(j+1).getNumber()){

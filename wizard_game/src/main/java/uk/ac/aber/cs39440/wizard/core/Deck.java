@@ -5,9 +5,9 @@ import java.util.Random;
 
 public class Deck {
 
-    ArrayList<Card> deck = new ArrayList<>();
-    char values[] = {'2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a'};
-int numbers[] = {2,3,4,5,6,7,8,9,10,11,12,13,14};
+    private ArrayList<Card> deck = new ArrayList<>();
+    final char[] values = {'2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a'};
+final int[] numbers = {2,3,4,5,6,7,8,9,10,11,12,13,14};
 Boolean isShuffled;
 
 
@@ -29,7 +29,7 @@ Boolean isShuffled;
         return deck.size();
     }
 
-    public void addwizard() {
+    public void addWizard() {
         for (int i = 0; i < 4; i++) {
             Card wizard = new Card(Suit.non, 'w',15);
             deck.add(wizard);
@@ -55,7 +55,7 @@ Boolean isShuffled;
             deck.add(hearts);
         }
 addJester();
-        addwizard();
+        addWizard();
 isShuffled = false;
     }
 
@@ -70,7 +70,11 @@ isShuffled = false;
         }
         isShuffled =true;
     }
- public void printDeck(){
+
+    /**
+     * Class used to manually check if all of the cards were generated and shuffled by visually looking if all the cards were there.
+     */
+    public void printDeck(){
         for (int i = 0; i < deck.size(); i++){
           System.out.println(deck.get(i).toString());
         }

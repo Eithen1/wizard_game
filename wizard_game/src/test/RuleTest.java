@@ -13,11 +13,11 @@ import static org.junit.Assert.assertEquals;
 import java.util.LinkedList;
 
 public class RuleTest {
- Card trump = new Card(Suit.hearts,'7',7);
-   Player p = new Player();
-   Player two = new Player();
-   LinkedList<Player>  players = new LinkedList<>();
-   Rules r;
+ private final Card trump = new Card(Suit.hearts,'7',7);
+   private final Player p = new Player();
+   private final Player two = new Player();
+   private final LinkedList<Player>  players = new LinkedList<>();
+   private Rules r;
 
 
 @Before

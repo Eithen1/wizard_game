@@ -10,32 +10,6 @@
 
 @string{aij = {Artificial Intelligence}}
 
-@misc{ProjectReportTechicalWork,
-	Annote = {A document that outlines information about the marking guide for the Project Report and Technical Work. This is published in the Resources folder on Blackboard.},
-	Author = {Taylor, N.},
-	Howpublished = {\url{http://blackboard.aber.ac.uk/}},
-	Month = February,
-	Note = {Accessed Ma},
-	Title = {{MMP\_S08 Project Report and Technical Work}},
-	Year = {2019}}
-
-@article{HannahsPaper,
-	Annote = {This is my annotation. I should add in a description here.},
-	Author = {Dee, H. M. and Hogg, D. C.},
-	Journal = aij,
-	Pages = {329-342},
-	Title = {Navigational strategies in behaviour modelling},
-	Volume = {173(2)},
-	Year = 2009}
-
-@misc{kittenpic_ref,
-	Annote = {This is my annotation. I should add in a description here.},
-	Author = {Sylvia Duckworth},
-	Howpublished = {\url{http://www.geograph.org.uk/photo/640959}},
-	Note = {Copyright Sylvia Duckworth and licensed for reuse under a Creative Commons Attribution-Share Alike 2.0 Generic Licence. Accessed August 2011},
-	Title = {{A picture of a kitten at Hellifield Peel}},
-	Year = 2007}
-
 @Misc{NeuralNetwork,
   title     = {Introduction to Neural Networks},
   year      = {2019},
@@ -55,7 +29,7 @@
 @Misc{MCTS1,
   title   = {MCTS Description},
   note    = {Accessed in March 2019},
-  comment = {Webiste used for Monte Carlo Tree Search Algorithm},
+  comment = {Webiste used for Monte Carlo Tree Search Algorithm and source for Figure 1.1.},
   url     = {mcts.ai/about/index.html},
 }
 
@@ -73,6 +47,22 @@
   comment = {A Video showing how Wizard is played},
   owner   = {TheDorkShop},
   url     = {www.youtube.com/watch?v=kgRoZ-Yd7tg},
+}
+
+@Misc{mctswithcode,
+  title   = {MCTS with Example Code},
+  month   = oct,
+  year    = {2019},
+  note    = {Accessed 16 April 2019},
+  comment = {Give Example Code used to help build the Ai in the project and source of Figure 1.2.},
+  url     = {https://www.baeldung.com/java-monte-carlo-tree-search},
+}
+
+@Misc{mctsSource,
+  author = {Rahul_Roy},
+  title  = {MCTS Source},
+  note   = {Accessed April 2019},
+  url    = {https://www.geeksforgeeks.org/ml-monte-carlo-tree-search-mcts/},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

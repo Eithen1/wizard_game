@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 public class DeckTest {
 
-public Deck deck;
+private Deck deck;
 
 @Before
 public void createTestDeck(){

@@ -1,8 +1,8 @@
 package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 
-public class Tree {
+class Tree {
 
-    Node root;
+    private Node root;
 
     public Tree(){
         root = new Node();

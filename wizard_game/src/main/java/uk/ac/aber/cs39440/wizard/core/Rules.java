@@ -4,9 +4,9 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 import java.util.LinkedList;
 
 public class Rules{
-    private LinkedList<Player> players;
-    public Player winner;
-    public  Card trump;
+    private final LinkedList<Player> players;
+    private Player winner;
+    private final Card trump;
 
     public Rules(LinkedList<Player> players, Card trump){
         this.players =players;
@@ -19,13 +19,13 @@ public class Rules{
         winner = new Player();
         this.trump = new Card();
     }
-    public void numberRule(Player p){
+    private void numberRule(Player p){
         if(winner.playCard.getNumber() < p.playCard.getNumber()){
             setWinner(p);
         }
     }
 
-   public void suitRule(Player p){
+   private void suitRule(Player p){
             if(((p.getPlayCard().getSuit() == trump.getSuit()) && (winner.getPlayCard().getSuit() == trump.getSuit()) )|| (winner.getPlayCard().getSuit() == p.getPlayCard().getSuit())){
                  numberRule(p);
                }
@@ -61,7 +61,7 @@ else if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().get
         return winner;
     }
 
-    public void setWinner(Player winner) {
+    private void setWinner(Player winner) {
         this.winner = winner;
     }
 

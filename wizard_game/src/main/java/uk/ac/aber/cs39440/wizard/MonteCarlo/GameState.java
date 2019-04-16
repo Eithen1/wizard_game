@@ -13,7 +13,7 @@ public class GameState {
     private static Deck cardsUsed = new Deck();
   private   LinkedList<Player> players;
    private Player ai = new Player();
-    int wins = ai.getTricksWon();
+    private int wins = ai.getTricksWon();
    int simWins = 0;
     int visitCount;
 
@@ -23,7 +23,7 @@ public GameState(){
 }
 
 public GameState(Deck deck, LinkedList<Player> players, Player ai){
-    this.cardsUsed = deck;
+    cardsUsed = deck;
     this.players  = new LinkedList<Player>();
     for(int i =0; i<players.size(); i++){
              this.players.add(new Player(players.get(i)));
@@ -48,40 +48,16 @@ public GameState(GameState state){
         return simWins;
     }
 
-    public void setSimWins(int simWins) {
-        this.simWins = simWins;
-    }
-
     public Player getAi() {
         return ai;
-    }
-
-    public void setAi(Player ai) {
-        this.ai = ai;
-    }
-
-    public Deck getCardsUsed() {
-        return cardsUsed;
-    }
-
-    public void setCardsUsed(Deck cardsUsed) {
-        this.cardsUsed = cardsUsed;
     }
 
     public int getWins() {
         return wins;
     }
 
-    public void setWins(int wins) {
-        this.wins = wins;
-    }
-
     public int getVisitCount() {
         return visitCount;
-    }
-
-    public void setVisitCount(int visitCount) {
-        this.visitCount = visitCount;
     }
 
     public LinkedList<Player> getPlayers() {
@@ -126,7 +102,7 @@ public GameState(GameState state){
     this.visitCount++;
     }
 
-    public void setAIafterRound(){
+    public void setAIAfterRound(){
     for(int i=0; i < players.size(); i++){
         if(ai.getPlayerID() == players.get(i).getPlayerID()){
             ai =players.get(i);
@@ -136,7 +112,7 @@ public GameState(GameState state){
 
     public int winsSim(){
     int i = ai.getPlayerID();
-    setAIafterRound();
+    setAIAfterRound();
     for(int j=0; j<players.size(); j++) {
         if(i == players.get(j).getPlayerID())
         if (players.get(j).getTricksWon() == players.get(j).getBid()) {
@@ -160,13 +136,4 @@ public GameState(GameState state){
     }
 
 
-    public boolean isFinal() {
-
-        for (int i = 0; i < players.get(i).getHand().size(); i++) {
-            if (!players.get(i).getHand().isEmpty()) {
-                return false;
-            }
-        }
-        return true;
-    }
 }

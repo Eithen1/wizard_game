@@ -3,7 +3,7 @@ package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 import java.util.*;
 
 public class Node {
-Node parent;
+private Node parent;
 List<Node> children;
 GameState state;
 
@@ -17,7 +17,7 @@ public Node(GameState gameState){
 this.state = gameState;
 }
 
-public  Node(Node parent, GameState  State , List<Node> children){
+public  Node(Node parent, GameState State){
     this.parent = parent;
     this.children = new ArrayList<>();
     this.state = State ;
@@ -74,12 +74,12 @@ for(int i=0; i<children.size(); i++){
     }
 
    int winnerScore = 0;
-    int otherscore =0;
+    int otherScore =0;
     if(children.get(i).getState().getVisitCount() >0){
 
-          otherscore = children.get(i).getState().getSimWins() / children.get(i).getState().getVisitCount();
+          otherScore = children.get(i).getState().getSimWins() / children.get(i).getState().getVisitCount();
     }
-    if (winnerScore <= otherscore){
+    if (winnerScore <= otherScore){
       winner = children.get(i);
     }
 }

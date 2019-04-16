@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="237.0" y="222.0">main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.Tree</node>
+    <node x="0.0" y="296.0">main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.UCT</node>
+    <node x="0.0" y="148.0">main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.Node</node>
+    <node x="0.0" y="222.0">main.java.uk.ac.aber.cs39440.wizard.core.Deck</node>
+    <node x="0.0" y="74.0">main.java.uk.ac.aber.cs39440.wizard.core.Round</node>
+    <node x="0.0" y="0.0">main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.MonteCarloTreeSearch</node>
+    <node x="128.0" y="74.0">main.java.uk.ac.aber.cs39440.wizard.core.Player</node>
+    <node x="116.0" y="296.0">main.java.uk.ac.aber.cs39440.wizard.core.Suit</node>
+    <node x="253.0" y="74.0">main.java.uk.ac.aber.cs39440.wizard.core.Game</node>
+    <node x="119.0" y="222.0">main.java.uk.ac.aber.cs39440.wizard.core.Card</node>
+    <node x="214.0" y="0.0">main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.GameState</node>
+    <node x="243.0" y="148.0">main.java.uk.ac.aber.cs39440.wizard.core.Main</node>
+    <node x="122.0" y="148.0">main.java.uk.ac.aber.cs39440.wizard.core.Rules</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes>
+    <node>main.java.uk.ac.aber.cs39440.wizard.core.Player</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
