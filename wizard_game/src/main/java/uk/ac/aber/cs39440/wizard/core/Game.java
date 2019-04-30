@@ -32,7 +32,9 @@ class Game {
     }
 
     public void reSetup() {
-        deck.reset();
+        deck = new Deck();
+        deck.generateDeck();
+        deck.shuffle();
      r.roundSetup();
         for (int i = 0; i < 2; i++) {
             players.get(i).populateHand(deck);

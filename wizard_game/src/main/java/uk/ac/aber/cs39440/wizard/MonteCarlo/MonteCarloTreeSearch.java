@@ -30,7 +30,7 @@ public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
     this.deck =  d;
     this.trump = new Card(trump);
     int iterations = 0;
-    GameState gameState = new GameState(deck,players,ai);
+    GameState gameState = new GameState(deck,players,ai,trump);
     long start = System.currentTimeMillis();
     long end = start + 60;
     Tree tree = new Tree();

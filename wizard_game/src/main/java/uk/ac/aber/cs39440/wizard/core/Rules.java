@@ -53,7 +53,6 @@ else if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().get
    public void scoringTrick(){
         wizardRule();
         winner.tricksWon++;
-        System.out.println(winner.getTricksWon());
         winner  = new Player();
    }
 

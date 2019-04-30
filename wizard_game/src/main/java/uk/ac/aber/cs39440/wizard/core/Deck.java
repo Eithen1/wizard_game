@@ -84,7 +84,7 @@ isShuffled = false;
      }
  }
  public void reset(){
-      delete();
+
       generateDeck();
       shuffle();
  }

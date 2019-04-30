@@ -53,21 +53,21 @@ private void playSimHand(){
             if(containsCard(p)){
                 do{
                     p.randomSelect();
-                } while(checkSuit(p) == false);}
+                } while(checkSuitSim(p) == false);}
             else {
               p.randomSelect();
             }
 
             p.getHand().remove(p.getPlayCard());
     }
-
-    applyRules();
+    applyRulesSim();
 }
 
 private void playHand() {
 for(int i=0; i<=2; i++){
     Player p = players.get(i);
     Card c;
+    if(p.getHand().size() > 1){
         if (p.isAI == false) {
             playerSelect(p);
             } else {
@@ -76,7 +76,10 @@ for(int i=0; i<=2; i++){
 
                p.setPlayCard(m.findNextMove(p,players,deck,trump));}
 
-                System.out.println(p.getPlayCard().toString());
+                System.out.println(p.getPlayCard().toString());}
+                else{
+        p.setPlayCard(p.getCard(0));
+    }
                 p.getHand().remove(p.getPlayCard());
 
 
@@ -85,6 +88,9 @@ for(int i=0; i<=2; i++){
 applyRules();
 }
 
+    /**
+     *
+     */
     public void playRandomHand() {
         for(int i=0; i<=2; i++){
             Player p = players.get(i);
@@ -156,14 +162,29 @@ private void applyRules(){
     System.out.println("---------------------------");
     changeDealer();
 }
+
+    private void applyRulesSim(){
+        Rules r = new Rules(players, trump);
+        r.scoringTrick();
+        changeDealer();
+    }
     private boolean checkSuit(Player p){
-        if(p.getPlayCard().getValue() != 'w'){
+        if(p.getPlayCard().getValue() != 'w'|| p.getPlayCard().getValue() != 's'){
             if( p.getPlayCard().getSuit() != players.get(0).getPlayCard().getSuit() ){
                 if(p.getPlayCard().getSuit() != trump.getSuit()){
                     if(p.isAI == false){
                     System.out.println("Play Card isn't equal to trump or Dealers Suit");}
                     return false;}
                 return true;
+            }
+        }
+        return true;
+    }
+
+    private boolean checkSuitSim(Player p){
+        if(p.getPlayCard().getValue() != 'w' || p.getPlayCard().getValue() != 's'){
+            if( p.getPlayCard().getSuit() != players.get(0).getPlayCard().getSuit() ){
+                return p.getPlayCard().getSuit() == trump.getSuit();
             }
         }
         return true;
@@ -217,10 +238,6 @@ public void playSimRound(int id){
     } while(p.hand.size() > 0);
     Rules r = new Rules(players,trump);
     r.scoring();
-    for(int i=0; i<players.size(); i++){
-        System.out.println(players.get(i).getScore());
-    }
-    check();
 }
 
 public void playRound(){
@@ -229,7 +246,7 @@ public void playRound(){
    Player p  = players.getLast();
 
     do{
-        playHand();
+        playRandomHand();
     } while(p.hand.size() > 0);
     Rules r = new Rules(players,trump);
     r.scoring();

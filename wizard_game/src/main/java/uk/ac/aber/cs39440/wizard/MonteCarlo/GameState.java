@@ -16,19 +16,20 @@ public class GameState {
     private int wins = ai.getTricksWon();
    int simWins = 0;
     int visitCount;
-
+  Card trump;
 
 public GameState(){
     players = new LinkedList<>();
 }
 
-public GameState(Deck deck, LinkedList<Player> players, Player ai){
+public GameState(Deck deck, LinkedList<Player> players, Player ai, Card trump){
     cardsUsed = deck;
     this.players  = new LinkedList<Player>();
     for(int i =0; i<players.size(); i++){
              this.players.add(new Player(players.get(i)));
     }
     this.ai = new Player(ai);
+    this.trump = trump;
 }
 
 
@@ -67,23 +68,36 @@ public GameState(GameState state){
     public void setPlayers(LinkedList<Player> players) {
         this.players = players;
     }
+public ArrayList<Card> playablecards(){
+    for (int i = 0; i < players.getFirst().getHand().size(); i++) {
+        GameState newState = new GameState(this);
+        LinkedList<Player> p = newState.getPlayers();
+        newState.setPlayers(new LinkedList<>(p));
+        for(int j=0; j < p.size(); j++){
+            if (ai.getPlayerID() == p.get(j).getPlayerID() || ai.getPlayerID() != p.get(0).getPlayerID()) {
+              ArrayList<Card> hand = p.get(j).getHand();
+              for(int y=0; y < p.get(j).getHand().size(); y++){
+                  if(hand.get(y) != trump || hand.get(y) != p.get(0).getPlayCard()){
+                      hand.remove(y);
+                  }
+                  return hand;
+              }
+            }
+        }
 
+    }
+    return null;
+}
    public List<GameState> getAllStates() {
 
        List<GameState> possibleStates = new ArrayList<>();
-       int k = players.getFirst().getHand().size();
-        for(int y=0; y <players.size(); y++) {
-            if(players.get(y).getHand().size() < k){
-                k= players.get(y).getHand().size();
-            }
-        }
 
        for (int i = 0; i < players.getFirst().getHand().size(); i++) {
            GameState newState = new GameState(this);
            LinkedList<Player> p = newState.getPlayers();
            newState.setPlayers(new LinkedList<>(p));
            for (int j = 0; j < p.size(); j++) {
-               ArrayList<Card> hand = p.get(j).getHand();
+               ArrayList<Card> hand = playablecards();
 
                if (ai.getPlayerID() == p.get(j).getPlayerID()) {
                    p.get(j).setPlayCard(hand.get(i));
