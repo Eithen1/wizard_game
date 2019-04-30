@@ -3,6 +3,7 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 
 import main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.MonteCarloTreeSearch;
 
+import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -15,9 +16,7 @@ private Card trump;
 
     public Round() {
     }
-
-
-
+    
     private Card getTrump() {
         return trump;
     }
@@ -34,7 +33,7 @@ public Round(Deck deck, LinkedList<Player> players){
 
     public void roundSetup(){
 
-    setTrump(deck.getCard(0));
+        setTrump(deck.getCard(0));
     deck.removeCard(0);
     for(int i=0; i<=2; i++){
         Player p = players.get(i);
@@ -76,7 +75,8 @@ for(int i=0; i<=2; i++){
 
                p.setPlayCard(m.findNextMove(p,players,deck,trump));}
 
-                System.out.println(p.getPlayCard().toString());}
+
+               System.out.println(p.getPlayCard().toString());}
                 else{
         p.setPlayCard(p.getCard(0));
     }
@@ -144,18 +144,39 @@ private void playerSelect(Player p){
     do{
     System.out.println("Trump: " + getTrump().toString());
     System.out.println("Select Card to Play");
+    try{
      n = reader.nextInt();
+     if(n > p.getHand().size() || n <= 0 ){
+         System.out.println("Please a number in the hand");
+     }
+    }
+    catch(InputMismatchException e){
+        System.out.println("Must Enter number");
+        n = reader.nextInt();
+    }
+
 p.setPlayCard(p.getCard(n));}
     while (checkSuit(p) == false);}
     else{
-        System.out.println("Trump: " + getTrump().toString());
-        System.out.println("Select Card to Play");
-        n = reader.nextInt();
+
+            System.out.println("Trump: " + getTrump().toString());
+            System.out.println("Select Card to Play");
+            try{
+                n = reader.nextInt();
+                if(n > p.getHand().size() || n <= 0 ){
+                    System.out.println("Please a number in the hand");
+                }
+            }
+            catch(InputMismatchException e){
+                System.out.println("Must Enter number");
+                n = reader.nextInt();
+            }
         p.setPlayCard(p.getCard(n)) ;
     }
 
     p.getHand().remove(n);
 }
+
 private void applyRules(){
     Rules r = new Rules(players, trump);
     r.scoringTrick();
@@ -169,7 +190,7 @@ private void applyRules(){
         changeDealer();
     }
     private boolean checkSuit(Player p){
-        if(p.getPlayCard().getValue() != 'w'|| p.getPlayCard().getValue() != 's'){
+        if(p.getPlayCard().getSuit() != Suit.non){
             if( p.getPlayCard().getSuit() != players.get(0).getPlayCard().getSuit() ){
                 if(p.getPlayCard().getSuit() != trump.getSuit()){
                     if(p.isAI == false){
@@ -246,7 +267,7 @@ public void playRound(){
    Player p  = players.getLast();
 
     do{
-        playRandomHand();
+        playHand();
     } while(p.hand.size() > 0);
     Rules r = new Rules(players,trump);
     r.scoring();

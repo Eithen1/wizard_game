@@ -68,26 +68,7 @@ public GameState(GameState state){
     public void setPlayers(LinkedList<Player> players) {
         this.players = players;
     }
-public ArrayList<Card> playablecards(){
-    for (int i = 0; i < players.getFirst().getHand().size(); i++) {
-        GameState newState = new GameState(this);
-        LinkedList<Player> p = newState.getPlayers();
-        newState.setPlayers(new LinkedList<>(p));
-        for(int j=0; j < p.size(); j++){
-            if (ai.getPlayerID() == p.get(j).getPlayerID() || ai.getPlayerID() != p.get(0).getPlayerID()) {
-              ArrayList<Card> hand = p.get(j).getHand();
-              for(int y=0; y < p.get(j).getHand().size(); y++){
-                  if(hand.get(y) != trump || hand.get(y) != p.get(0).getPlayCard()){
-                      hand.remove(y);
-                  }
-                  return hand;
-              }
-            }
-        }
 
-    }
-    return null;
-}
    public List<GameState> getAllStates() {
 
        List<GameState> possibleStates = new ArrayList<>();
@@ -97,7 +78,7 @@ public ArrayList<Card> playablecards(){
            LinkedList<Player> p = newState.getPlayers();
            newState.setPlayers(new LinkedList<>(p));
            for (int j = 0; j < p.size(); j++) {
-               ArrayList<Card> hand = playablecards();
+               ArrayList<Card> hand = p.get(j).getHand();
 
                if (ai.getPlayerID() == p.get(j).getPlayerID()) {
                    p.get(j).setPlayCard(hand.get(i));

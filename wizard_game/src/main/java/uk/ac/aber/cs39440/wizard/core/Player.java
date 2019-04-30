@@ -31,6 +31,10 @@ public Player(Player p){
         this.isAI = p.isAI();
 }
 
+    /**
+     * Populates the hand of the player with cards from the deck and then removes them from the deck.
+     * @param deck
+     */
     public void populateHand(Deck deck) {
         for (int i = 0; hand.size()< 15; i++) {
             if (deck.getCard(i) != null) {
@@ -55,6 +59,9 @@ public Player(Player p){
         return hand;
     }
 
+    /**
+     * Converts the array of cards in the players hand to string.
+     */
 
     public void handToString() {
         System.out.println();
@@ -107,6 +114,9 @@ public Card getCard(int i){
         this.playCard = playCard;
     }
 
+    /**
+     * Randomly selects a card to be use by the player.
+     */
     public void randomSelect() {
         Random r = new Random();
         int i = r.nextInt(hand.size());
@@ -115,6 +125,10 @@ public Card getCard(int i){
         }
     }
 
+    /**
+     * Counts how many cards are above a number of 11 and of the trump suit then divide by 2 to give a bid
+     * @param trump the trump card use in the round
+     */
     public void ruleBid(Card trump){
         int counter = 0;
         ArrayList<Card> temp = getHand();
@@ -129,6 +143,9 @@ public Card getCard(int i){
         setBid(counter/2);
     }
 
+    /**
+     * Random choose a bid
+     */
     public  void randomBid(){
         Random r = new Random();
         int i = r.nextInt(hand.size());
@@ -136,7 +153,9 @@ public Card getCard(int i){
 
     }
     /**
-     * Created List of Cards that match the Suit of the Trump Card in the Players Hand
+     * Creates a list of cards that are more likely to be used the the trump suit list
+     * @param trump The card of which it suit these cards wont contain
+     * @return an array of cards that are of the trumps suit
      */
     private LinkedList<Card> ListOfTrumpSuit(Card trump){
         LinkedList<Card> TrumpPriority = new LinkedList<Card>();
@@ -151,6 +170,11 @@ public Card getCard(int i){
         return sortList(TrumpPriority);
     }
 
+    /**
+     * Creates a list of cards that are less likely to be used the the trump suit list
+     * @param trump The card of which it suit these cards wont contain
+     * @return an array of cards that are not of the trumps suit
+     */
     private LinkedList<Card> ListOfOtherSuit(Card trump){
         LinkedList<Card> OtherPriority = new LinkedList<>();
         OtherPriority.addAll(getHand());
@@ -164,6 +188,12 @@ public Card getCard(int i){
 
         return sortList(OtherPriority);
     }
+
+    /**
+     * Sorts the hand of the player by the best number of the card
+     * @param list the hand of the player
+     * @return a sorted list of the hand of the player
+     */
     private LinkedList<Card> sortList(LinkedList<Card> list){
 
             for(int j=0; j < list.size()-1; j++)
@@ -176,7 +206,10 @@ public Card getCard(int i){
         return list;
     }
 
-
+    /**
+     * Selects the card by who has from the two list if the value is close to the bid.
+     * @param trump the trump card for the round.
+     */
     public void ruleBasedSelect(Card trump){
 
         LinkedList<Card> OtherPriority = ListOfOtherSuit(trump);

@@ -99,17 +99,16 @@
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="419">
+              <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+              <folding>
+                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1289#1290#0" expanded="true" />
+                <element signature="e#1317#1318#0" expanded="true" />
+                <element signature="e#1434#1435#0" expanded="true" />
+                <element signature="e#1463#1464#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,8 +116,8 @@
       <file leaf-file-name="MonteCarloTreeSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+            <state relative-caret-position="180">
+              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -126,20 +125,8 @@
       <file leaf-file-name="Rules.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MonteCarloTreeSearchTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/MonteCarloTreeSearchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-232">
+              <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -147,8 +134,8 @@
       <file leaf-file-name="Round.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="663">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#biddingforRound#0;class#Round#0" />
@@ -157,48 +144,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameState.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="95" column="52" lean-forward="true" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3053#3054#0" expanded="true" />
-                <element signature="e#3082#3083#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeckTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/DeckTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="524">
+              <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Main.java">
+      <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="426">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
-                <element signature="e#274#275#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1538#1539#0" expanded="true" />
+                <element signature="e#1576#1577#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Deck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#740#741#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#881#882#0" expanded="true" />
+                <element signature="e#598#599#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#2938#2939#0" expanded="true" />
+                <element signature="e#2967#2968#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -235,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/State.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Tree.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/AI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/init/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/init/UCT.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/init/FullyObservableState.java" />
@@ -244,15 +228,16 @@
         <option value="$PROJECT_DIR$/src/test/DeckTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/Node.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java" />
         <option value="$PROJECT_DIR$/src/test/MonteCarloTreeSearchTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java" />
       </list>
     </option>
   </component>
@@ -272,9 +257,9 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="968" />
-    <option name="width" value="959" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="953" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -286,8 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -331,6 +314,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -586,7 +571,8 @@
       <workItem from="1554670435742" duration="48128000" />
       <workItem from="1554920979421" duration="15566000" />
       <workItem from="1556364092568" duration="11443000" />
-      <workItem from="1556472710982" duration="4956000" />
+      <workItem from="1556472710982" duration="12614000" />
+      <workItem from="1556658355239" duration="7776000" />
     </task>
     <servers />
   </component>
@@ -623,7 +609,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295115000" />
+    <option name="totallyTimeSpent" value="310549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,61 +621,59 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="953" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159913" side_tool="true" weight="0.55335534" />
-      <window_info anchor="right" id="Maven Projects" order="10" sideWeight="0.49789914" weight="0.05970149" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32822758" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.05970149" />
-      <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.4829483" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.31808278" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3179318" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159913" side_tool="true" weight="0.55335534" />
+      <window_info anchor="right" id="Maven Projects" order="10" sideWeight="0.49789914" weight="0.05970149" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.6067538" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.4814815" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5021008" side_tool="true" weight="0.05970149" />
-      <window_info anchor="bottom" id="Sequence" />
+      <window_info anchor="bottom" id="Sequence" order="16" weight="0.99782133" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32897604" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.27238807" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.3717805" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32822758" />
       <window_info id="Learn" order="6" weight="0.32889125" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.05970149" />
+      <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.4825708" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" id="JetGradle" order="5" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection Results" order="14" sideWeight="0.49946696" weight="0.32897604" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
+      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5021008" side_tool="true" weight="0.05970149" />
       <window_info anchor="bottom" id="Changes" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Profiler" order="9" />
-      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="right" id="JetGradle" order="5" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Problems" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="9" />
       <window_info anchor="bottom" id="Application Servers" order="11" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Application Servers" order="12" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="2" />
+      <window_info id="Learn" order="6" weight="0.32889125" />
       <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49840087" visible="true" weight="0.4814815" />
-      <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32893288" />
       <window_info anchor="right" id="JetGradle" order="5" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.05970149" />
-      <window_info anchor="bottom" id="Changes" order="8" />
+      <window_info anchor="right" id="Palette" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Profiler" order="10" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="15" weight="0.32897604" />
+      <window_info anchor="bottom" id="Changes" order="8" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Inspection Results" order="16" sideWeight="0.49946696" weight="0.32897604" />
@@ -697,23 +681,25 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159913" side_tool="true" weight="0.55335534" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="17" weight="0.31808278" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32897604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Sequence" order="0" />
       <window_info anchor="bottom" id="Problems" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven Projects" order="10" sideWeight="0.49789914" visible="true" weight="0.05970149" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.27238807" />
-      <window_info id="Learn" order="6" weight="0.32889125" />
+      <window_info anchor="right" id="Maven Projects" order="10" sideWeight="0.49789914" weight="0.05970149" />
+      <window_info anchor="bottom" id="Terminal" order="15" weight="0.32897604" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.27238807" />
       <window_info anchor="right" id="Database" order="4" weight="0.32822758" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32897604" />
+      <window_info id="Image Layers" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5021008" side_tool="true" visible="true" weight="0.05970149" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49840087" weight="0.4829483" />
+      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5021008" side_tool="true" weight="0.05970149" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32893288" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49840087" weight="0.4825708" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -740,24 +726,6 @@
           <line>57</line>
           <properties />
           <option name="timeStamp" value="435" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="542" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="547" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="548" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java</url>
@@ -797,26 +765,66 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="655" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java</url>
-          <line>35</line>
+          <line>43</line>
           <properties />
           <option name="timeStamp" value="656" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java</url>
-          <line>33</line>
-          <properties class="main.java.uk.ac.aber.cs39440.wizard.core.Player" method="populateHand">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="650" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="672" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="673" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="674" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="675" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="677" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="678" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="680" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="681" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="683" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="657" />
+      <option name="time" value="684" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1028,17 +1036,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/modules.uml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/UCT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1109,71 +1106,12 @@
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
-            <Category>Methods</Category>
             <Category>Constructors</Category>
+            <Category>Methods</Category>
             <Category>Properties</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MonteCarloTreeSearchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#274#275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#biddingforRound#0;class#Round#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,22 +1125,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/test/MonteCarloTreeSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="238">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Rules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#274#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#2938#2939#0" expanded="true" />
+            <element signature="e#2967#2968#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="95" column="52" lean-forward="true" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
+        <state relative-caret-position="426">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3053#3054#0" expanded="true" />
-            <element signature="e#3082#3083#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1576#1577#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/MonteCarlo/MonteCarloTreeSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Round.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#biddingforRound#0;class#Round#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="101" selection-start-line="34" selection-start-column="101" selection-end-line="34" selection-end-column="101" />
+          <folding>
+            <element signature="e#1187#1188#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+          <folding>
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/aber/cs39440/wizard/core/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
         </state>
       </provider>
     </entry>

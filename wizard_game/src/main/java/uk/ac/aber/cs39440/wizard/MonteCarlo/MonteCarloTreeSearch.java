@@ -38,7 +38,7 @@ public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
     rootNode.setState(gameState);
 
 
-  while(iterations < 100
+  while(iterations < 10000
           ) {
 
        // Selection

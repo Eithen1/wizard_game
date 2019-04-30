@@ -5,28 +5,36 @@
 
 \subsection{Class Descriptions}
 \subsubsection{Game Classes}
+The game class section will describe the different classes used within the project and where they link with the use of diagrams to help illastrate.
 \begin{figure}[h]
 \centering
+\label{fig:Game_Classes}
 \includegraphics[width=15cm ,height=20cm,keepaspectratio]{Game_Classes}
 \caption{Diagram Showing the Class Diagram of the Game Classes}
-\end{figure}[h]
+\end{figure}
 \paragraph{Card}
-This Card class created Card objects that will contain variables for the suit, the value of the card in relation to the other and the number displayed on the card such as a wizards or an ace. It will also contain methods to construct the card and getters ans setters for each of the variables. Card will also contain a copying constructor for the use of the AI. This class wil mainly be used in the generation of the deck but will also be used in the sel
+This Card class created Card objects that will contain variables for the suit, the value of the card in relation to the other and the number displayed on the card such as a wizard or an ace. It will also contain methods to construct the card and getters and setters for each of the variables. Card will also contain a copying constructor for the use of the AI. This class will mainly be used in the generation of the deck but will also be used in the in other methods to refer to the suit and number(the value of the card in reference to the game, like ace being worth 14) used within the cards
 \paragraph{Deck}
-Deck is a class for create a deck object to be used in the 
-\paragraph{Player}
+Deck is a class for create a deck object to be used for in the classes of game, round and the Monte Carlo Tree Search. It contains variables for an array of cards, and array of the different values there are for the cards and the numbers they each will have. There is also a Boolean variable to check if the deck has been shuffled. The deck class will also contain values to create and the wizards and jester cards to be added to the normal 52 card deck that is generated with a different method. there will also be a method to shuffle the deck of cards so that each player gets different cards for each round.
+\paragraph{Player} 
+The player class constructs the player objects that will contains variable for the player id; the cards they currently have in there hand; there bid and score; the card they have played for the trick; how many trick they have won and if it is an AI or normal player. This class will contain the getters and setts for the these variable whenever they will be need. It will also contain methods to print out the hand they currently have; constructors to copy the players variables; to populate the hand of the deck from cards they are within the deck. the is methods to randomly and rule based selection the cards and bids for the more simple AI.
 \paragraph{Round}
+the Round class wi
 \paragraph{Rules}
 \paragraph{Game}
+The game class contains methods to setup up the game with variables for the array of 3 players and how many are human, the round  and the deck used. This class also contains methods to resetup the game, how many rounds are players and who the winner of the game is.
 \paragraph{Suit}
+An enumerator class that contains the 5 different suits that the card could be such as heart, spades, clubs, diamonds and non for the wizard and jester cards.
 \paragraph{Main}
+This it the main class used to intailise the game and contains the game object for this to happen.
 \subsubsection{Aritifical Intelligence Classes}
 \begin{figure}[h]
 \centering
+\label{fig:AI_Classes}
 \includegraphics[width=15cm ,height=20cm,keepaspectratio]{AI_Classes}
 \caption{Diagram Showing the Class Diagram of the AI Classes and the linking Round Class}
-\end{figure}[h]
-This section will show you the classes associated with Monte Carlo Tree Search AI. 
+\end{figure}
+This section will show you the classes associated with Monte Carlo Tree Search AI it made more sense for the complex Ai to be separate from the main game.
 \paragraph{Node}
 
 \paragraph{Tree}
@@ -38,18 +46,36 @@ This section will show you the classes associated with Monte Carlo Tree Search A
 \section{Some detailed design}
 In this section I will outline the important Algorithms to be used in the program and discuss how the User interface will looked and function.
 \subsection{Algorithm Design}
+\subsubsection{Scoring}
+\begin{figure}
+\centering
+\label{fig:Scoring}
+\includegraphics[width=15cm ,height=20cm,keepaspectratio]{ScoringSequenceDiagram}
+\caption{Sequence Diagram of Scoring Method for Algorithm Description}
+\end{figure}
+\subsubsection{WinSim}
+\begin{figure}
+\centering
+\label{fig:WinSim}
+\includegraphics[width=15cm ,height=20cm,keepaspectratio]{WinSimSequenceDiagram}
+\caption{Sequence Diagram of WinSim Method of Winning simulation Algorithm }
+\end{figure}
+\subsubsection{Rules}
+\begin{figure}
+\centering
+\label{fig:Rules}
+\includegraphics[width=15cm ,height=20cm,keepaspectratio]{RuleSequenceDiagram}
+\caption{Sequence Diagram for the Rules Algorithm}
+\end{figure}
+\subsubsection{Play Hand}
+\begin{figure}
+\centering
+\label{fig:Play}
+\includegraphics[width=15cm ,height=20cm,keepaspectratio]{PlayHandSequenceDiagram}
+\caption{Sequence Diagram of Play Hand method for the Algorithm that shows what happens when a card is played}
+\end{figure}
 \section{User Interface}
 As this project is mainly based on the Artificial Intelligence, only a simple User interface is needed. So, using a Terminal UI seems the best choice. This will include showing the cards that the player has in their hand and the card they will play. This interface will also allow you to bid at the beginning of the round after the trump card and hands have been given out. After the round has been completed it shows the number of tricks that has been won, the score they have received based on their bid and trick they have won.
-\section{Other relevant sections}
 
-You should concentrate on the more important aspects of the design. It is essential that an overview is presented before going into detail. As well as describing the design adopted it must also explain what other designs were considered and why they were rejected.
 
-The design should describe what you expected to do, and might also explain areas that you had to revise after some investigation.
 
-Typically, for an object-oriented design, the discussion will focus on the choice of objects and classes and the allocation of methods to classes. The use made of reusable components should be described and their source referenced. Particularly important decisions concerning data structures usually affect the architecture of a system and so should be described here.
-
-How much material you include on detailed design and implementation will depend very much on the nature of the project. It should not be padded out. Think about the significant aspects of your system. For example, describe the design of the user interface if it is a critical aspect of your system, or provide detail about methods and data structures that are not trivial. Do not spend time on long lists of trivial items and repetitive descriptions. If in doubt about what is appropriate, speak to your supervisor.
- 
-You should also identify any support tools that you used. You should discuss your choice of implementation tools - programming language, compilers, database management system, program development environment, etc.
-
-Some example sub-sections may be as follows, but the specific sections are for you to define. 
