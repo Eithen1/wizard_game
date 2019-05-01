@@ -33,9 +33,11 @@ public GameState(Deck deck, LinkedList<Player> players, Player ai, Card trump){
 }
 
 
-
-
-public GameState(GameState state){
+    /**
+     * A class the copy the game state
+     * @param state the new copied game state.
+     */
+    public GameState(GameState state){
     this.players = new LinkedList<Player>();
     for(int i =0; i<state.players.size(); i++){
         this.players.add(new Player(state.players.get(i)));
@@ -69,6 +71,10 @@ public GameState(GameState state){
         this.players = players;
     }
 
+    /**
+     * Give a list of all the states meaning the play card the player can make next turn.
+     * @return list of all states the game could have next
+     */
    public List<GameState> getAllStates() {
 
        List<GameState> possibleStates = new ArrayList<>();
@@ -105,6 +111,10 @@ public GameState(GameState state){
     }
     }
 
+    /**
+     * Give a score to how well the simulation went by how far away from the bid it was.
+     * @return int of score given
+     */
     public int winsSim(){
     int i = ai.getPlayerID();
     setAIAfterRound();
@@ -123,7 +133,10 @@ public GameState(GameState state){
     return Integer.parseInt(null);
     }
 
-
+    /**
+     * Add one more score to the wins
+     * @param wins wins plus one
+     */
     public void addScore(int wins){
     if(this.wins != Integer.MIN_VALUE){
         this.simWins += wins;

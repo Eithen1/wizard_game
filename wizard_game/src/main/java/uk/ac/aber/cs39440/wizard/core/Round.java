@@ -16,7 +16,7 @@ private Card trump;
 
     public Round() {
     }
-    
+
     private Card getTrump() {
         return trump;
     }
