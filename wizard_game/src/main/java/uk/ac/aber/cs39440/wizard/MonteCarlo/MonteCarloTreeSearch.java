@@ -18,9 +18,15 @@ int bid;
 Deck deck;
 Card trump;
 
-
-
-public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
+     /**
+      * Main Method to obtain the Play Card that the AI will play using the Monte Carlo Tree Search
+      * @param ai The player that will be using this method
+      * @param p The list of players in the card and their variables
+      * @param d The deck used in the card
+      * @param trump The trump cards for the game
+      * @return The play card determined by the MCTS.
+      */
+     public Card findNextMove(Player ai, LinkedList<Player> p, Deck d, Card trump){
     this.ai = new Player(ai);
     this.players = new LinkedList<>();
     for(int i =0; i<p.size();i++){

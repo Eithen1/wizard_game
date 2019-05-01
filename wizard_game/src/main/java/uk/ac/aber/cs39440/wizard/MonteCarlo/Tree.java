@@ -1,6 +1,6 @@
 package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 
-class Tree {
+public class Tree {
 
     private Node root;
 

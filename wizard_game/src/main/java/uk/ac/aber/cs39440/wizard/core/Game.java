@@ -4,7 +4,7 @@ package main.java.uk.ac.aber.cs39440.wizard.core;
 import java.util.LinkedList;
 
 
-class Game {
+public class Game {
 
     private Deck deck;
     private final LinkedList<Player> players = new LinkedList<>();
@@ -89,4 +89,15 @@ class Game {
         }
     }
 
+    public LinkedList<Player> getPlayers() {
+        return players;
+    }
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public Round getR() {
+        return r;
+    }
 }

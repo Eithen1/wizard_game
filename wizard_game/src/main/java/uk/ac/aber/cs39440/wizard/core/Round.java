@@ -12,12 +12,12 @@ public class Round{
     private final Scanner reader = new Scanner(System.in);
     private Deck deck;
     private LinkedList<Player> players   = new LinkedList<>();
-private Card trump;
+public Card trump;
 
     public Round() {
     }
 
-    private Card getTrump() {
+    public Card getTrump() {
         return trump;
     }
 
@@ -213,18 +213,19 @@ private void applyRules(){
 private boolean containsCard(Player p){
 
     if(p != players.get(0)){
-        for(int i=0; i < p.getHand().size(); i++){
-            Card c = p.getHand().get(i);
-            if(c.getSuit() == trump.getSuit() || c.getSuit() == players.get(0).getPlayCard().getSuit()) {
-                return true;
+        int j=0;
+        do {
+            for (int i = 0; i < p.getHand().size(); i++) {
+                Card c = p.getHand().get(i);
+                if (c.getSuit() == trump.getSuit() || c.getSuit() == players.get(0).getPlayCard().getSuit()) {
+                    return true;
+                }
+                j++;
             }
-        }
-        return false;
+        }while (j < p.getHand().size()) ;
     }
-    return true;
-
+     return false;
 }
-
 private void check(){
     for(int i=0; i<players.size();i++){
         System.out.println("Tricks Won "+players.get(i).getTricksWon() + " " + players.get(i));

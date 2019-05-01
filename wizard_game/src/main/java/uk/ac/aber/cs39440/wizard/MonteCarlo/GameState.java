@@ -3,6 +3,7 @@ package main.java.uk.ac.aber.cs39440.wizard.MonteCarlo;
 import main.java.uk.ac.aber.cs39440.wizard.core.Card;
 import main.java.uk.ac.aber.cs39440.wizard.core.Deck;
 import main.java.uk.ac.aber. cs39440.wizard.core.Player;
+import main.java.uk.ac.aber.cs39440.wizard.core.Suit;
 
 
 import java.util.*;
@@ -45,7 +46,12 @@ public GameState(Deck deck, LinkedList<Player> players, Player ai, Card trump){
     this.visitCount = state.getVisitCount();
     this.wins = state.getWins();
     this.ai = state.getAi();
+    this.trump = state.getTrump();
 }
+
+    public Card getTrump() {
+        return trump;
+    }
 
     public int getSimWins() {
         return simWins;
@@ -72,23 +78,68 @@ public GameState(Deck deck, LinkedList<Player> players, Player ai, Card trump){
     }
 
     /**
+     * Method use the prune the search space by only using the cards that are valid to play as the childs.
+     * @return Array of cards that are legal to play in the game.
+     */
+    public ArrayList<Card> validCards(){
+        for(int i=0; i < players.size(); i++){
+            if(players.get(i).getPlayerID() == ai.getPlayerID()){
+               Player player =  players.get(i);
+               if(player.getPlayerID() == players.get(0).getPlayerID()){
+                   return player.getHand();
+               }
+               else{
+                   if(containsCard(player) == true){
+                       ArrayList<Card> valid = new ArrayList<>();
+                       for(int j= player.getHand().size() ; j > 0; j--){
+                           if(player.getHand().get(j-1).getSuit() == trump.getSuit() || player.getHand().get(j-1).getSuit() == players.get(0).getPlayCard().getSuit() || player.getHand().get(j-1).getSuit() == Suit.non){
+                               valid.add(player.getHand().get(j-1));
+                           }
+                       }
+                       return valid;
+                   }
+                   else {
+                       return player.getHand();
+                   }
+               }
+            }
+        }
+        return null;
+}
+    private boolean containsCard(Player p){
+
+        if(p != players.get(0)){
+            int j=0;
+            do {
+                for (int i = 0; i < p.getHand().size(); i++) {
+                    Card c = p.getHand().get(i);
+                    if (c.getSuit() == trump.getSuit() || c.getSuit() == players.get(0).getPlayCard().getSuit() || c.getSuit() == Suit.non
+                            ) {
+                        return true;
+                    }
+                    j++;
+                }
+            }while (j < p.getHand().size()) ;
+        }
+        return false;
+    }
+    /**
      * Give a list of all the states meaning the play card the player can make next turn.
      * @return list of all states the game could have next
      */
    public List<GameState> getAllStates() {
 
        List<GameState> possibleStates = new ArrayList<>();
-
-       for (int i = 0; i < players.getFirst().getHand().size(); i++) {
+       ArrayList<Card> hand = new ArrayList<>(validCards());
+       for (int i = 0; i < hand.size(); i++) {
            GameState newState = new GameState(this);
            LinkedList<Player> p = newState.getPlayers();
            newState.setPlayers(new LinkedList<>(p));
            for (int j = 0; j < p.size(); j++) {
-               ArrayList<Card> hand = p.get(j).getHand();
 
                if (ai.getPlayerID() == p.get(j).getPlayerID()) {
                    p.get(j).setPlayCard(hand.get(i));
-                   p.get(j).getHand().remove(i);
+                   p.get(j).getHand().remove(hand.get(i));
                    possibleStates.add(newState);
                }
            }

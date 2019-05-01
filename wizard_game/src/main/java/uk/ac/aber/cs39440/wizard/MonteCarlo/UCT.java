@@ -5,17 +5,13 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Random;
 
-class UCT {
-   private static double uctValue(int totalVisit, int nodeWins, int nodeVisit) {
+public class UCT {
+   public static double uctValue(int totalVisit, int nodeWins, int nodeVisit) {
        if (nodeVisit == 0) {
            return Integer.MAX_VALUE;
        }
-       else{
-           double value = nodeWins/nodeVisit;
-           value += (double)totalVisit * Math.sqrt((2*Math.log((double)totalVisit)) /(double)nodeVisit);
-        //   return (nodeWins / (double) nodeVisit) + 1.41 * Math.sqrt(Math.log(totalVisit) / (double) nodeVisit);
-      return value;
-       }
+       return (nodeWins / (double) nodeVisit) + 1.41 * Math.sqrt(Math.log(totalVisit) / (double) nodeVisit);
+
    }
 
 public static Node findBestNodeWithUCT(Node node) {

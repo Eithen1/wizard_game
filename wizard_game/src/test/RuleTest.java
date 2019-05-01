@@ -1,5 +1,3 @@
-package test;
-
 import main.java.uk.ac.aber.cs39440.wizard.core.Card;
 import main.java.uk.ac.aber.cs39440.wizard.core.Player;
 import main.java.uk.ac.aber.cs39440.wizard.core.Rules;
