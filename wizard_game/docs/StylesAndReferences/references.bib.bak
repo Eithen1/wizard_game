@@ -89,9 +89,18 @@
   url     = {http://www.tug.org/texworks/},
 }
 
-@Unpublished{,
+@Unpublished{javadescript,
+  title   = {Java-Intro},
   comment = {Website showing what java is and how it is used. Accessed: April 2019},
   url     = {https://www.w3schools.com/java/java_intro.asp},
+}
+
+@Article{neural,
+  author  = {Luke Dormehl},
+  title   = {What is an artifical network?},
+  year    = {January 5th 2019},
+  comment = {Description of neural network},
+  url     = {https://www.digitaltrends.com/cool-tech/what-is-an-artificial-neural-network/},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

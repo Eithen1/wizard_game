@@ -5,23 +5,22 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Random;
 
+/**
+ * The Upper confidence bound applied to tree value.
+ */
 public class UCT {
    public static double uctValue(int totalVisit, int nodeWins, int nodeVisit) {
        if (nodeVisit == 0) {
            return Integer.MAX_VALUE;
        }
        return (nodeWins / (double) nodeVisit) + 1.41 * Math.sqrt(Math.log(totalVisit) / (double) nodeVisit);
-
    }
 
-public static Node findBestNodeWithUCT(Node node) {
-      int parentVisit = node.getState().getVisitCount();
-      return Collections.max(
-              node.getChildren(),
-              Comparator.comparing(c -> uctValue(parentVisit, c.getState().getSimWins(), c.getState().getVisitCount()))
-      );
-   }
-
+    /**
+     * Selects the best child based on the fraction between the amount of simulation wins and the amount of visits the node has had already
+     * @param node the root node from which all child nodes come from.
+     * @return the node best node to be expand on next.
+     */
     public static Node bestChild(Node node) {
         Iterator<Node> it = node.getChildren().iterator();
         Node best = it.next();

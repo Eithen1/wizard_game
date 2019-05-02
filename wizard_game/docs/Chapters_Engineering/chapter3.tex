@@ -6,7 +6,7 @@ In my implementation chapter, the way in which it built the project will be disc
 \subsection{Sprint 1- Setup}
 For me to begin the project, there was setup needed to be done to ensure that it can have a safe place to store the project and that it is built in. This was done by setting up a GitLab repository for the Wizard card game to be stored on allowing me to access different versions of the game as it progresses. I also made sure that there was access for my Supervisor to see the progress that I was making. It was also set up a private blog for me to keep track of the progress and problems faced during the implementation. It was also made sure that it had the correct IDE to use on my personal computer for the development of the game. The IDE that was chosen was IntelliJ IDEA 2018 and was chosen for it easy of use and the familiarity with the system. After this was installed and working correctly i added a few initial classes for a idea of what the game will look like. These classes include:
 \begin{itemize}
-\item AI - The classes to hold all of the code for the Artificial Intelligence Players that will be the main players opponents.
+\item AI - The classes to hold all the code for the Artificial Intelligence Players that will be the main players opponents.
 \item Card - A constructor class that makes the cards to be used in the deck that initially only contained variables for the suit and value of the cards.
 \item Deck - This classes will make and array of cards containing the normal 52 cards deck and the extra 4 wizards and jester cards. This will then be used in the player and game classes to use their cards in its array.
 \item Game - This class is to initially contain all the methods for applying the game rules and start the game.
@@ -14,7 +14,7 @@ For me to begin the project, there was setup needed to be done to ensure that it
 \item Suit - Suit will be a enumerator classes that contains the 4 different suits of heart, spade, diamond and clubs. It will also have a null variable for the jester and wizard cards.
 \end{itemize}
 
-This classes will then give me a basic overview of how the project will be initially structured which can then be built on over time. The was problems to begin with with linking my local repository to the GitLab one but this was shortly fixed by doing it through the Git Bash rather than the website itself.
+This classes will then give me a basic overview of how the project will be initially structured which can then be built on over time. The was problems to begin with linking my local repository to the GitLab one but this was shortly fixed by doing it through the Git Bash rather than the website itself.
 \subsection{Sprint 2-Create Shuffled Deck}
 For this part of my implementation I tasked myself to create a deck for the Game to use and the for this to be shuffled randomly so it the cards every player will have will be different. This involved create a variable method for generated a normal 52 card deck and then adding the jesters and wizards afterwards. This in order deck would then use a shuffling algorithm\cite{shuffle}, making sure that the player would get different hands each round. This had a simple UI that showed the initial generated deck with all the cards contained in it. This then ordered deck will be shuffled and printed out on the UI in it new shuffled state to show that it has worked and manually tested.
 \subsection{Sprint 3-- Create Players and Play Cards}

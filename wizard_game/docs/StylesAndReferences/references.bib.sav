@@ -90,9 +90,24 @@
 }
 
 @Unpublished{javadescript,
-  title   = {J},
+  title   = {Java-Intro},
   comment = {Website showing what java is and how it is used. Accessed: April 2019},
   url     = {https://www.w3schools.com/java/java_intro.asp},
+}
+
+@Article{neural,
+  author  = {Luke Dormehl},
+  title   = {What is an artifical network?},
+  year    = {January 5th 2019},
+  comment = {Description of neural network},
+  url     = {https://www.digitaltrends.com/cool-tech/what-is-an-artificial-neural-network/},
+}
+
+@Article{minmax,
+  author = {R},
+  title  = {Minimax Algorithm with Aplha-beta pruning},
+  year   = {March 31 2017},
+  url    = {https://www.hackerearth.com/blog/artificial-intelligence/minimax-algorithm-alpha-beta-pruning/},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

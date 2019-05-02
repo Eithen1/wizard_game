@@ -1,29 +1,54 @@
 \chapter{Testing}
+For the testing aspect of this project it was decided to use the Junit package to test some of the functionality of the game with it AI. There will also be the use of Unit testing to check to see if the if the project has passed the basic needs for it to function properly. As the game was more create for the use of the Monte Carlo Tree search, testing with people to check it replay ability and how fun it was to play was not need.
+\subsection{Unit Testing}
+Junit was used during and after the project was fully functional to test the different aspect of the game that needed to work properly to ensure that it was up to standard. This involved create different Test classes to check each of the part. This test was mainly built to test the more vital parts of the system as if the core classes weren’t working properly, the more complex aspects wouldn’t either. This classed involved were:
+\begin{itemize}
+\item CardTest - To test that the card contains the suit, value and number that has been inputted.
+\item DeckTest -
+\item MonteCarloTreeSearchTest -
+\item RoundTest-
+\Item RuleTest-
+\end{itemize}
+\subsection{Acceptance Testing}
+\begin{center}
+\begin{table}
+   \begin{tabular}{| l | p{5cm} | l | p{5cm} |}
+        \hline
+        Test Number & Expected Functionality                                                                            & Passed/Failed & If Failed,why?/ Extra information                                                   \\ \hline
+        1           & Be able to enter a bid in the beginning of the round                                              & Passed        & ~                                                                                   \\ \hline
+        2           & Be able to enter a Card to Play                                                                    & Passed        & Player must select card based on there allocated number displayed in the console    \\ \hline
+        3           & When selecting invalid card another can be selected                                               & Passed        & Displays Messages telling player to enter a card with a suit of the dealer or trump \\ \hline
+        4           & If the player is the dealer any card may be selected                                              & Passed        & ~                                                                                   \\ \hline
+        5           & If the first wizard card is played they always win the trick                                      & Passed        & ~                                                                                   \\ \hline
+        6           & If Jester is played, they always lose the trick                                                   & Passed        & ~                                                                                   \\ \hline
+        7           & If two players have the same suit, the higher valued card wins                                    & Passed        & ~                                                                                   \\ \hline
+        8           & A normal 52 card deck is generated with 4 wizard and jester cards                                 & Passed        & ~                                                                                   \\ \hline
+        9           & The deck is shuffled randomly before card are handed out                                          & Passed        & ~                                                                                   \\ \hline
+        10          & Be able to play 5 rounds of the game                                                              & Passed        & ~                                                                                   \\ \hline
+        11          & Each player has 15 cards                                                                          & Passed        & Shown in console by everyone having 15 cards in their hand                          \\ \hline
+        12          & A trump card is selected from the deck                                                            & Passed        & ~                                                                                   \\ \hline
+        13          & If player wins game a message is displayed                                                        & Passed        & ~                                                                                   \\ \hline
+        14          & Each player is scored based on how many trick they have won and how close to their bid they were. & Passed        & ~                                                                                   \\ \hline
+        15          & The dealer changes each time a round ends                                                         & Passed        & ~                                                                                   \\ \hline
+        16          & The game is simulated for the AI                                                                  & Passed        & ~                                                                                   \\ \hline
+        \hline
+    \end{tabular}
+\end{table}
+\end{center}
+\newpage
 
-Detailed descriptions of every test case are definitely not what is required here. What is important is to show that you adopted a sensible strategy that was, in principle, capable of testing the system adequately even if you did not have the time to test the system fully.
+\begin{center}
+\begin{table}
+\begin{tabular}{| l | p{5cm} | l | p{5cm} |}
+\hline
+Test Number & Expected Functionality & Passed/Failed & If Failed,why?/ Extra information \\ \hline
+17 & The root node in the MCTS has child nodes with different cards that are played & Passed & ~ \\ \hline
+18 & The selection of a node to expand uses UCT & Passed & ~ \\ \hline
+19 & The best node is selected based on the one with the higest score to visit ratio & Passed & ~ \\
+\hline
+\end{tabular}
+\end{table}
+\end{center}
+\subsection{Manual Testing}
+There was also the use of manually testing the game. This was done by playing the game to see if anything unusual or unexpected would happen such an invalid card being played. This was made easier to diagnose use the Intellij$'$s debugger so the problem could be found quickly. This shone light onto the problem of the user being able to enter a letter, symbol or number that was invalid for the bid or play card. This could be fixed by either allowing the input of the name of the card as it displayed on the console or doing a loop to show an error until a valid input can be accepted.
 
-Provide information in the body of your report and the appendix to explain the testing that has been performed. How does this testing address the requirements and design for the project?
-
-How comprehensive is the testing within the constraints of the project?  Are you testing the normal working behaviour? Are you testing the exceptional behaviour, e.g. error conditions? Are you testing security issues if they are relevant for your project? 
-
-Have you tested your system on ``real users''? For example, if your system is supposed to solve a problem for a business, then it would be appropriate to present your approach to involve the users in the testing process and to record the results that you obtained. Depending on the level of detail, it is likely that you would put any detailed results in an appendix.
-
-Whilst testing with ``real users'' can be useful, don't see it as a way to shortcut detailed testing of your own. Think about issues discussed in the lectures about until testing, integration testing, etc. User testing without sensible testing of your own is not a useful activity.
-
-The following sections indicate some areas you might include. Other sections may be more appropriate to your project. 
-
-\section{Overall Approach to Testing}
-
-\section{Automated Testing}
-
-\subsection{Unit Tests}
-
-\subsection{User Interface Testing}
-
-\subsection{Stress Testing}
-
-\subsection{Other types of testing}
-
-\section{Integration Testing}
-
-\section{User Testing}

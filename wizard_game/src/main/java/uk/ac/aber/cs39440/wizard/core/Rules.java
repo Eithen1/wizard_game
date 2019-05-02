@@ -19,22 +19,34 @@ public class Rules{
         winner = new Player();
         this.trump = new Card();
     }
+
+    /**
+     * Finds the player whose play card has the largest number
+     * @param p the player to compare to the winner
+     */
     private void numberRule(Player p){
         if(winner.playCard.getNumber() < p.playCard.getNumber()){
             setWinner(p);
         }
     }
 
+    /**
+     * Finds out if the player match the trump or dealers suit and whose is better if the same then move onto the number rule
+     * @param p the player to compare to the winner
+     */
    private void suitRule(Player p){
             if(((p.getPlayCard().getSuit() == trump.getSuit()) && (winner.getPlayCard().getSuit() == trump.getSuit()) )|| (winner.getPlayCard().getSuit() == p.getPlayCard().getSuit())){
                  numberRule(p);
                }
-else if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().getSuit() != p.getPlayCard().getSuit()){
+if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().getSuit() != p.getPlayCard().getSuit()){
                 setWinner(p);
             }
 
    }
 
+    /**
+     * Checks to see if the player has a wizard card and if not compares to the winner if they dont have a wizard
+     */
    public void wizardRule(){
         for (int i=0; i<players.size(); i++){
             Player p = players.get(i);
@@ -50,6 +62,10 @@ else if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().get
             }
         }
    }
+
+    /**
+     * Gives the winner of the rules one more point towards their trick won
+     */
    public void scoringTrick(){
         wizardRule();
         winner.tricksWon++;
@@ -64,6 +80,9 @@ else if(p.getPlayCard().getSuit() == trump.getSuit() && winner.getPlayCard().get
         this.winner = winner;
     }
 
+    /**
+     * Gives the player a score based of how many trick that have won and what their bid was.
+     */
     public void scoring(){
         for (int i=0; i< players.size(); i++){
             Player p = players.get(i);

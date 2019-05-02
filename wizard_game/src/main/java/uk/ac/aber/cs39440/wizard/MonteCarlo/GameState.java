@@ -106,6 +106,12 @@ public GameState(Deck deck, LinkedList<Player> players, Player ai, Card trump){
         }
         return null;
 }
+
+    /**
+     * Checks that the hand of the player has a card that is valid to use in the game
+     * @param p the players who cards we are checking
+     * @return a boolean showing if it does contain any valid cards.
+     */
     private boolean containsCard(Player p){
 
         if(p != players.get(0)){

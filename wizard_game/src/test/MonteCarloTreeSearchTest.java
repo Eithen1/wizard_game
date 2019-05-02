@@ -1,7 +1,6 @@
 
 
 import main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.GameState;
-import main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.Tree;
 import main.java.uk.ac.aber.cs39440.wizard.MonteCarlo.MonteCarloTreeSearch;
 import main.java.uk.ac.aber.cs39440.wizard.core.Game;
 import org.junit.Before;

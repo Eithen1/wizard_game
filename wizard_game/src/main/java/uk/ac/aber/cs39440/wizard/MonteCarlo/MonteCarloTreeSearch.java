@@ -77,7 +77,12 @@ Node winner = rootNode.getChildWithMaxScore();
     return winningCard;
 }
 
-private Node selection(Node rootNode){
+     /**
+      * Select the best child based of the Upper Confidence Bound applied for trees(UCT)
+      * @param rootNode the node contains the state the game is currently in before the MCTS
+      * @return the best nodes for expansion.
+      */
+     private Node selection(Node rootNode){
 Node node =rootNode;
 while(node.getChildren().size() !=0 ){
     node = new Node(UCT.bestChild(node));
@@ -85,7 +90,10 @@ while(node.getChildren().size() !=0 ){
 return node;
 }
 
-
+     /**
+      * Expands the node to shows the options the player can take to build a larger search tree.
+      * @param node the node that has been selected by the tree search to be expanded
+      */
     private void expandNode(Node node){
     List<GameState> possibleStates = node.getState().getAllStates();
     possibleStates.forEach(gameState -> {
@@ -95,7 +103,11 @@ return node;
     });
     }
 
-private void backPropogation(Node nodeToExplore){
+     /**
+      * Bring the score and visits amount back up to the child node it came from.
+      * @param nodeToExplore the node at which the tree search explored from
+      */
+     private void backPropogation(Node nodeToExplore){
     Node tempNode = nodeToExplore;
     while (tempNode != null) {
         tempNode.getState().incrementVisit();
@@ -103,7 +115,13 @@ private void backPropogation(Node nodeToExplore){
         tempNode = tempNode.getParent();
     }
 }
-private int simulateRandomPlay(Node n){
+
+     /**
+      * Simulate the game until it has finish a round to show if the play card resulted in being close to the bid.
+      * @param n the node containing the gamme state that the tree search ahs selected
+      * @return the win score, larger it is the higher it is to the bid.
+      */
+     private int simulateRandomPlay(Node n){
     Node tempNode = new Node(n);
     GameState tempState =  new GameState(tempNode.getState());
     int wins;

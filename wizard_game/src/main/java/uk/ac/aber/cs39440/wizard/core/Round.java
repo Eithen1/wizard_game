@@ -63,7 +63,7 @@ private void playSimHand(){
 }
 
 private void playHand() {
-for(int i=0; i<=2; i++){
+for(int i=0; i<players.size(); i++){
     Player p = players.get(i);
     Card c;
     if(p.getHand().size() > 1){
@@ -88,11 +88,9 @@ for(int i=0; i<=2; i++){
 applyRules();
 }
 
-    /**
-     *
-     */
+
     public void playRandomHand() {
-        for(int i=0; i<=2; i++){
+        for(int i=0; i<=1; i++){
             Player p = players.get(i);
             Card c = new Card();
             if (p.isAI == false) {
@@ -189,7 +187,7 @@ private void applyRules(){
         r.scoringTrick();
         changeDealer();
     }
-    private boolean checkSuit(Player p){
+    public boolean checkSuit(Player p){
         if(p.getPlayCard().getSuit() != Suit.non){
             if( p.getPlayCard().getSuit() != players.get(0).getPlayCard().getSuit() ){
                 if(p.getPlayCard().getSuit() != trump.getSuit()){
@@ -210,7 +208,7 @@ private void applyRules(){
         }
         return true;
     }
-private boolean containsCard(Player p){
+public boolean containsCard(Player p){
 
     if(p != players.get(0)){
         int j=0;
@@ -278,7 +276,7 @@ public void playRound(){
     check();
 }
 
-   private void changeDealer() {
+   public void changeDealer() {
         for(int i=0; i < players.size(); i++){
             players.get(i).setPlayCard(null);
         }

@@ -60,12 +60,20 @@ public  Node(Node parent, GameState State){
         this.state = state;
     }
 
+    /**
+     * Returns a random Child node
+     * @return random child node
+     */
     public Node getRandomChildNode() {
         int noOfPossibleMoves = this.children.size();
         int selectRandom = (int) (Math.random() * noOfPossibleMoves);
         return this.children.get(selectRandom);
     }
 
+    /**
+     * Finds the child node with the largest score and returns it.
+     * @return child node with largest score
+     */
     public Node getChildWithMaxScore() {
    Node winner = new Node();
 for(int i=0; i<children.size(); i++){
