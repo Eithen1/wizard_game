@@ -4,36 +4,30 @@ For the testing aspect of this project it was decided to use the Junit package t
 Junit was used during and after the project was fully functional to test the different aspect of the game that needed to work properly to ensure that it was up to standard. This involved create different Test classes to check each of the part. This test was mainly built to test the more vital parts of the system as if the core classes weren’t working properly, the more complex aspects wouldn’t either. This classed involved were:
 \begin{itemize}
 \item CardTest - To test that the card contains the suit, value and number that has been inputted.
-\item DeckTest -
-\item MonteCarloTreeSearchTest -
-\item RoundTest-
-\Item RuleTest-
+\item DeckTest - This class test that a 52-card deck with the extra 4 wizard and jester cards are created. It also tests that has been shuffled and that is does contain the wizard and jester cards.
+\item MonteCarloTreeSearchTest - The methods in this classes will check that the Tree search genrates a the UCT values correctly and that possible states are generated when the node is to be expanded upon as it is one of the crucial methods to create the tree of which to be search.
+\item RoundTest- This class will tests that the dealer do change after every trick is made; that when it play a hand, the correct person wins the tricks won point; checks that the hand of the player contains a card of the same suit as the trump or dealer and that a valid card is player by matching the dealer or trump card.
+\item RuleTest- For the ruletest classes, the methods will check to see if the wizard will be the winner overall against the other player; that the player who matches the trump suit beats non trump suit matched player and that if they have the same suit, the higher valued card wins. There will also be method to make sure the jester always loses, and the first played wizard always wins. One more method will be in the class to check that each of the players will receive the correct score based on their tricks won and bid.
 \end{itemize}
 \subsection{Acceptance Testing}
+Belows shows the acceptance test that the have been set for the game to functiion properly, it will conain information on what the test is, if its passed and if fail was was wrong.It also contains extra information if the test has passed but here is a problem that doesnt affect the main functionality to pass the test.
 \begin{center}
-\begin{table}
-   \begin{tabular}{| l | p{5cm} | l | p{5cm} |}
-        \hline
-        Test Number & Expected Functionality                                                                            & Passed/Failed & If Failed,why?/ Extra information                                                   \\ \hline
-        1           & Be able to enter a bid in the beginning of the round                                              & Passed        & ~                                                                                   \\ \hline
-        2           & Be able to enter a Card to Play                                                                    & Passed        & Player must select card based on there allocated number displayed in the console    \\ \hline
-        3           & When selecting invalid card another can be selected                                               & Passed        & Displays Messages telling player to enter a card with a suit of the dealer or trump \\ \hline
-        4           & If the player is the dealer any card may be selected                                              & Passed        & ~                                                                                   \\ \hline
-        5           & If the first wizard card is played they always win the trick                                      & Passed        & ~                                                                                   \\ \hline
-        6           & If Jester is played, they always lose the trick                                                   & Passed        & ~                                                                                   \\ \hline
-        7           & If two players have the same suit, the higher valued card wins                                    & Passed        & ~                                                                                   \\ \hline
-        8           & A normal 52 card deck is generated with 4 wizard and jester cards                                 & Passed        & ~                                                                                   \\ \hline
-        9           & The deck is shuffled randomly before card are handed out                                          & Passed        & ~                                                                                   \\ \hline
-        10          & Be able to play 5 rounds of the game                                                              & Passed        & ~                                                                                   \\ \hline
-        11          & Each player has 15 cards                                                                          & Passed        & Shown in console by everyone having 15 cards in their hand                          \\ \hline
-        12          & A trump card is selected from the deck                                                            & Passed        & ~                                                                                   \\ \hline
-        13          & If player wins game a message is displayed                                                        & Passed        & ~                                                                                   \\ \hline
-        14          & Each player is scored based on how many trick they have won and how close to their bid they were. & Passed        & ~                                                                                   \\ \hline
-        15          & The dealer changes each time a round ends                                                         & Passed        & ~                                                                                   \\ \hline
-        16          & The game is simulated for the AI                                                                  & Passed        & ~                                                                                   \\ \hline
-        \hline
-    \end{tabular}
-\end{table}
+\begin{tabular}{| l | p{5cm} | l | p{5cm} |}
+\hline
+Test Number & Expected Functionality & Passed/Failed & If Failed,why?/ Extra information \\ \hline
+1 & Be able to enter a bid in the beginning of the round & Passed & ~ \\ \hline
+2 & Be able to enter a Card to Play & Passed & Player must select card based on there allocated number displayed in the console \\ \hline
+3 & When selecting invalid card another can be selected & Passed & Displays Messages telling player to enter a card with a suit of the dealer or trump \\ \hline
+4 & If the player is the dealer any card may be selected & Passed & ~ \\ \hline
+5 & If the first wizard card is played they always win the trick & Passed & ~ \\ \hline
+6 & If Jester is played, they always lose the trick & Passed & ~ \\ \hline
+7 & If two players have the same suit, the higher valued card wins & Passed & ~ \\ \hline
+8 & A normal 52 card deck is generated with 4 wizard and jester cards & Passed & ~ \\ \hline
+9 & The deck is shuffled randomly before card are handed out & Passed & ~ \\ \hline
+10 & Be able to play 5 rounds of the game & Passed & ~ \\ \hline
+11 & Each player has 15 cards & Passed & Shown in console by everyone having 15 cards in their hand \\ \hline
+12 & A trump card is selected from the deck & Passed & ~ \\ \hline
+\end{tabular}
 \end{center}
 \newpage
 
@@ -41,14 +35,19 @@ Junit was used during and after the project was fully functional to test the dif
 \begin{table}
 \begin{tabular}{| l | p{5cm} | l | p{5cm} |}
 \hline
+13 & If player wins game a message is displayed & Passed & ~ \\ \hline
+14 & Each player is scored based on how many trick they have won and how close to their bid they were. & Passed & ~ \\ \hline
+15 & The dealer changes each time a round ends & Passed & ~ \\ \hline
+16 & The game is simulated for the AI & Passed & ~ \\ \hline
 Test Number & Expected Functionality & Passed/Failed & If Failed,why?/ Extra information \\ \hline
 17 & The root node in the MCTS has child nodes with different cards that are played & Passed & ~ \\ \hline
 18 & The selection of a node to expand uses UCT & Passed & ~ \\ \hline
-19 & The best node is selected based on the one with the higest score to visit ratio & Passed & ~ \\
+19 & The best node is selected based on the one with the highest score to visit ratio & Passed & ~ \\
 \hline
 \end{tabular}
 \end{table}
 \end{center}
+As the game has passed all of it acceptance tests, it can be assumed that the game works based on the tests that it has to pass.
 \subsection{Manual Testing}
 There was also the use of manually testing the game. This was done by playing the game to see if anything unusual or unexpected would happen such an invalid card being played. This was made easier to diagnose use the Intellij$'$s debugger so the problem could be found quickly. This shone light onto the problem of the user being able to enter a letter, symbol or number that was invalid for the bid or play card. This could be fixed by either allowing the input of the name of the card as it displayed on the console or doing a loop to show an error until a valid input can be accepted.
 

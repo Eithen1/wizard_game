@@ -1,34 +1,29 @@
 \chapter{Evaluation}
 \section{Introduction}
-For this chapter of work it will be discussed on the my opinion on how the project wwent and the quality of the game that has been created. It will also discuss the how well acheievs the aims set and the area in which it could be improved. 
+For this chapter of work it will be discussed how the project went and the quality of the game that has been created based on my opinion. It will also discuss the how well achieves the aims set and the area in which it could be improved. There will also be sections to cover the design of the program, how well the methodology I use went, the testing of the functionality of the game and the future development of the game.
 \section{Aim}
-list aim and how well at acheiving
-\section{Objectives}
-lisrt objective and how well acheieved
+For the project I aimed to create a functional software version of the card game wizard, which I believe was achieved to a satisfactory degree. This is because it follows all the rules set by the description of the game to the different limitations that I have set for the game. This includes having 3 players playing against each other in the game. Of the three different player 2 of them are AI that use the Monte Carlo Tree Search Algorithm to choose their cards and a rule-based selection for their bid. The player also has 15 cards each and automatically plays the last round of cards as they only have one card each. 
+
+I feel all the aim were achieved to a degree that I useable and the user can see that they AI make a good decision. The aims also included a use-case diagrams, showing all the different use-cases the project would have to pass to be a good game and AI to use. This was separated out into the Game and the AI to be used. I personally feel all of the use cases in the wizard card game were met quite well with he use of the command line interface, as it allowed for all of the necessary data and displayed the hand, trump card, selected cards, how many trick they won in the round and who has won the game. This allows the player to see all of data that would be needed to play the game and see how well the AI has perform for that game it has played. However, I feel that aspects of the AI could have been improved such as the scoring for the simulations so that a better card could been selected. I feel that the aims that I set of this project worked quite well as there was definitive things that needs to be done for the project that I knew would need to be achieved for the work to be completed.
 \section{Design}
-This project was 
+Due to the use of an agile methodology, the design of the project changed a lot from what I was initially going to be structured like. I feel that separate out the Monte Carlo Tree Search from the rest was the best decision to make for it design so that there is a clear separation between the both of them ,allowing for more algorithms to be implements easily with a few minor changes to the main games class to add the algorithms. This is thanks to the use of the object orientation of java; however, python would have also been a good alternative for the use of AI as I found a lot of other programs used when implementing AI due to there being a lot of libraries there to use. 
+Some of the problem I have with the way in which the project has been design is that some of the methods used for AI in the player class. This could have been solved by creating a super class for both the human and AI class so that they share the methods they both need but can each have their own separate methods to use for themselves. There are also a few duplicated methods throughout the classes which can by create a separate method contains the duplicate code but due to the time constraints, the main concern what to make sure that everything was functioning properly. Another part of the class structure that could be improved upon is to reduce the amount of methods in the round class, as there are specific classes in it to be used for the simulation of the game for the tree search. This can be done by making a class that extends the normal round class but contains different functions in the methods use for the simulation such as the text sent to command line
+
+As for the User interface, I believe it has a good simplistic style with the use of the terminal that shows the data it needs too so that more focus can be put on designing the AI. However, I feel there could be better expectation catching for when an invalid variable is entered, for which I would allow the user to enter a value even after the error was made. I also feel that entering there could be something to show how well the tree search perform by showing how long it took to do the amount of iterations or a way to show how many nodes where created. Overall I feel that the design was created to a standard that is good enough for the game to functional but there is still room for improvement over all part of the game.
 \section{Project Management}
-Would of been better to use mix of FDD and scrum.
+During the process of the project, the values of the Scrum methodology were taken into consideration as the development progressed. Throughout this time, the use of sprint was being used to the best of my ability but, I found it difficult to keep to the sprints as it as keeping interest in the longer sprint was hard and I would find myself wondering to improve or do other parts of the implementation. If I was able to keep to these sprints, maybe the design of the project was of been to a higher standard than it already it and it would of left the project easier to improve upon. Another part I tried to keep up was my openness about where I was in the project, however I would feel disheartened when I felt I was falling behind but the sessions with my supervisor would clear up these doubts. For this project I felt I kept to the methodology as best as I could, but a feature driven development and a mix of scrum would have been a better method as I was mainly focusing on developing different features within the game and Ai instead of what I was doing in the sprints. This would also allow to complete different parts of the project at the same time. So, if a problem arise in one part, then another part can be worked on until a solution can be found.
 \section{Testing}
-use of unit testing and maual tests, white and black box. What could of been better.
+For the testing part, i feels that the unit tests using JUnit were suffiencient enought to test the overall functinality of the game and the important method to make sure the tree was constructed properly for the Monte Carlo Tree Search. However i feel given more time to apply more tests, more through testing can be put on the game back apply tests to each of the methods used.
+use of unit testing and manual tests, white and black box. What could of been better.
 \section{Further Development}
-Examiners expect to find a section addressing questions such as:
+In this section i will be discussed the different future development this project may have in the future to improve upon its functionality and look.
+\paragraph{GUI}
+The addition of a graphical user interface is com
 
-\begin{itemize}
-   \item Were the requirements correctly identified? 
-   \item Were the design decisions correct?
-   \item Could a more suitable set of tools have been chosen?
-   \item How well did the software meet the needs of those who were expecting to use it?
-   \item How well were any other project aims achieved?
-   \item If you were starting again, what would you do differently?
-\end{itemize}
+\paragraph{Improving MCTS}
 
-Other questions can be addressed as appropriate for a project. 
+\paragraph{Neural Network}
 
-The questions are an indication of issues you should consider. They are not intended as a specification of a list of sections.
+\paragraph{Saving and Loading Game}
 
-The evaluation is regarded as an important part of the project report; it should demonstrate that you are capable not only of carrying out a piece of work but also of thinking critically about how you did it and how you might have done it better. This is seen as an important part of an honours degree. 
-
-There will be good things in the work and aspects of the work that could be improved. As you write this section, identify and discuss the parts of the work that went well and also consider ways in which the work could be improved. 
-
-In the latter stages of the module, we will discuss the evaluation. That will probably be around week 9, although that differs each year. 
+\paragraph{Mobile Version}
